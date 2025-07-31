@@ -1,0 +1,2113 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Title -->
+    <title>Viento</title>
+    <!-- Favicon Icon -->
+    <link rel="icon" type="image/x-icon" href="./assets/images/logos/Flaticon.svg" />
+    <!-- Google Fonts -->
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="assets/vendor/fontawesome-5.14.0.min.css">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
+    <!-- Magnific Popup -->
+    <link rel="stylesheet" href="assets/vendor/magnific-popup/css/magnific-popup.min.css">
+    <!-- Nice Select -->
+    <link rel="stylesheet" href="assets/vendor/nice-select/css/nice-select.min.css">
+    <!-- Animate -->
+    <link rel="stylesheet" href="assets/vendor/animate.min.css">
+    <!-- Slick -->
+    <link rel="stylesheet" href="assets/vendor/slick/css/slick.min.css">
+    <!-- Main Style -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+
+    <style>
+        @font-face {
+            font-family: 'Giliyans-Regular' !important;
+            src: url('/assets/fonts/Giliyans-Regular.otf') format('opentype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        body {
+            font-family: 'Giliyans-Regular', sans-serif !important;
+        }
+
+
+        /* menu */
+        .dropdown ul {
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 10px;
+            list-style: none;
+        }
+
+        .dropdown ul li {
+            position: relative;
+        }
+
+        .dropdown ul img {
+            position: absolute;
+            top: -100%;
+            left: 100%;
+            opacity: 0;
+            width: 40%;
+            visibility: hidden;
+        }
+
+        .navbar-collapse .navigation>li>a:hover {
+            color: #e2da47 !important;
+        }
+
+        .navbar-collapse .navigation .dropdown1 a:hover {
+            color: #e2da47 !important;
+        }
+
+
+        .mb-39 {
+            padding-bottom: 38px;
+        }
+
+
+
+
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        main {
+            display: grid;
+            place-items: center;
+        }
+
+        img {
+            display: block;
+            max-width: 100%;
+        }
+
+        iframe {
+            aspect-ratio: 16 / 9;
+        }
+
+        .yt-wrapper {
+            margin: 0.5rem;
+            max-height: 300px;
+        }
+
+        .slider-wrapper {
+            display: grid;
+            place-content: center;
+            position: relative;
+            overflow: hidden;
+            border-radius: 1rem;
+            --slider-pos: 50%;
+        }
+
+        .slider-images {
+            max-width: 800px;
+            max-height: 90vh;
+            /* aspect-ratio: 1 / 1; */
+        }
+
+        .img-item {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        .slider-before {
+            position: absolute;
+            inset: 0;
+            width: var(--slider-pos);
+            /* filter: grayscale(100%); */
+        }
+
+        .slider-control {
+            position: absolute;
+            inset: 0;
+            cursor: pointer;
+            opacity: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .slider-control:focus-visible~.slider-handle {
+            outline: 5px solid black;
+            outline-offset: 3px;
+        }
+
+        .slider-divider {
+            position: absolute;
+            inset: 0;
+            width: 0.2rem;
+            height: 100%;
+            background-color: #fff;
+            left: var(--slider-pos);
+            transform: translateX(-50%);
+            pointer-events: none;
+        }
+
+        .slider-handle {
+            position: absolute;
+            background-color: #fff;
+            color: black;
+            padding: 0.5rem;
+            border-radius: 100vw;
+            display: grid;
+            place-items: center;
+            top: 50%;
+            left: var(--slider-pos);
+            transform: translate(-50%, -50%);
+            pointer-events: none;
+            box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+        }
+
+
+
+
+        .main-title {
+            margin: 0;
+            padding: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 4em;
+            color: transparent;
+            text-transform: uppercase;
+        }
+
+        .top-slice {
+            position: absolute;
+            top: 0;
+            left: 0;
+            color: white;
+            transition: 0.5s;
+            clip-path: polygon(0 0, 100% 0, 100% 50%, 0 50%);
+            overflow: hidden;
+        }
+
+        .main-title:hover .top-slice {
+            transform: translateY(-18px);
+        }
+
+        .bottom-slice {
+            position: absolute;
+            top: 0;
+            left: 0;
+            color: white;
+            transition: 0.5s;
+            clip-path: polygon(0 50%, 100% 50%, 100% 100%, 0 100%);
+            overflow: hidden;
+        }
+
+        .main-title:hover .bottom-slice {
+            transform: translateY(18px);
+        }
+
+        .highlight-bar {
+            position: absolute;
+            top: 50%;
+            left: 2%;
+            transform: translateY(-50%) scaleY(0);
+            width: 98%;
+            /* color: #000; */
+            background: #ff0;
+            color: black;
+            font-size: 0.25em;
+            font-weight: 500;
+            letter-spacing: 0.7em;
+            text-align: center;
+            padding-left: 20px;
+            margin-left: 0px;
+            transition: 0.5s;
+        }
+
+        .main-title:hover .highlight-bar {
+            transform: translateY(-50%) scaleY(1);
+        }
+
+
+
+        #Library {
+            background-image: url('./assets/images/nature-images.webp');
+            width: 441px;
+            height: 560px;
+        }
+
+        #Library:hover {
+            background-image: url('./assets/images/Mint1.webp');
+        }
+
+
+
+
+
+
+        .client-section {
+            padding-block: min(20vh, 2rem);
+            width: calc(min(76.5rem, 90%));
+            margin-inline: auto;
+            color: #111;
+            font-family: "Lato", sans-serif;
+        }
+
+        .client-heading {
+            text-transform: capitalize;
+            letter-spacing: 0.025em;
+            font-size: clamp(2rem, 1.8125rem + 0.75vw, 2.6rem);
+        }
+
+        .client-grid {
+            margin-top: 1em;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+            gap: 2rem;
+        }
+
+        .client-card:nth-child(1) .client-box .client-icon .client-iconBox {
+            background: #e2da47;
+        }
+
+        .client-card:nth-child(2) .client-box .client-icon .client-iconBox {
+            background: #e2da47;
+        }
+
+        .client-card:nth-child(3) .client-box .client-icon .client-iconBox {
+            background: #e2da47;
+        }
+
+        .client-card ul {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 0.625rem;
+        }
+
+        .client-card ul li {
+            text-transform: uppercase;
+            background: var(--client-tag);
+            color: #282828;
+            font-weight: 700;
+            font-size: 0.8rem;
+            padding: 0.375rem 0.625rem;
+            border-radius: 0.188rem;
+        }
+
+        .client-tag-branding {
+            color: #704a31;
+        }
+
+        .client-tag-packaging {
+            color: #1e3938;
+        }
+
+        .client-tag-marketing {
+            color: #4d1637;
+        }
+
+        .client-content {
+            padding: 0.938rem 0.625rem;
+        }
+
+        .client-content h3 {
+            text-transform: capitalize;
+            font-size: clamp(1.5rem, 1.3909rem + 0.4364vw, 1.8rem);
+        }
+
+        .client-content p {
+            margin: 0.625rem 0 1.25rem;
+            color: #565656;
+        }
+
+        .client-card-inner {
+            position: relative;
+            width: inherit;
+            height: 18.75rem;
+            background: var(--client-clr);
+            border-radius: 1.25rem;
+            border-bottom-right-radius: 0;
+            overflow: hidden;
+        }
+
+        .client-box {
+            width: 100%;
+            height: 100%;
+            background: #fff;
+            border-radius: 1.25rem;
+            overflow: hidden;
+        }
+
+        .client-imgBox {
+            position: absolute;
+            inset: 0;
+        }
+
+        .client-imgBox img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .client-icon {
+            position: absolute;
+            bottom: -0.375rem;
+            right: -0.375rem;
+            width: 6rem;
+            height: 6rem;
+            background: var(--client-clr);
+            border-top-left-radius: 50%;
+        }
+
+        .client-icon:hover .client-iconBox {
+            transform: scale(1.1);
+        }
+
+        .client-icon::before {
+            position: absolute;
+            content: "";
+            bottom: 0.375rem;
+            left: -1.25rem;
+            background: transparent;
+            width: 1.25rem;
+            height: 1.25rem;
+            border-bottom-right-radius: 1.25rem;
+            box-shadow: 0.313rem 0.313rem 0 0.313rem #fff;
+        }
+
+        .client-icon::after {
+            position: absolute;
+            content: "";
+            top: -1.25rem;
+            right: 0.375rem;
+            background: transparent;
+            width: 1.25rem;
+            height: 1.25rem;
+            border-bottom-right-radius: 1.25rem;
+            box-shadow: 0.313rem 0.313rem 0 0.313rem var(--client-clr);
+        }
+
+        .client-iconBox {
+            position: absolute;
+            inset: 0.625rem;
+            background: #282828;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: 0.3s;
+        }
+
+        .client-iconBox span {
+            color: #fff;
+            font-size: 1.5rem;
+        }
+
+
+
+
+
+        /* reviews */
+
+        .review-container {
+            width: 100%;
+            padding: 2rem;
+        }
+
+        .review-grid {
+            display: grid;
+            gap: 5rem;
+        }
+
+        .review-image-box {
+            position: relative;
+            width: 100%;
+            height: 32rem;
+            perspective: 1000px;
+        }
+
+        .review-image {
+            position: absolute;
+            width: 76%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 1.5rem;
+            transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .review-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .review-name {
+            font-size: 3.5rem;
+            font-weight: bold;
+            color: #000;
+            margin-bottom: 0.25rem;
+        }
+
+        .review-role {
+            font-size: 1.875rem;
+            color: #6b7280;
+            margin-bottom: 2rem;
+        }
+
+        .review-text {
+            font-size: 1.5rem;
+            color: #4b5563;
+            line-height: 1.75;
+        }
+
+        .review-arrows {
+            display: flex;
+            gap: 1rem;
+            padding-top: 3rem;
+        }
+
+        .review-btn {
+            width: 1.75rem;
+            height: 1.75rem;
+            border-radius: 50%;
+            background-color: black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .review-btn:hover {
+            background-color: #e2da47;
+        }
+
+        .review-btn svg {
+            width: 1.25rem;
+            height: 1.25rem;
+            fill: #f1f1f7;
+            transition: transform 0.3s;
+        }
+
+        .review-btn:hover svg {
+            fill: #ffffff;
+        }
+
+        .review-prev:hover svg {
+            transform: rotate(-12deg);
+        }
+
+        .review-next:hover svg {
+            transform: rotate(12deg);
+        }
+
+        @media (min-width: 768px) {
+            .review-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .review-arrows {
+                padding-top: 0;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="page-wrapper light-mode">
+
+        <!-- Preloader -->
+        <div class="preloader">
+            <div class="custom-loader">
+                <img src="./assets/images/logos/Flaticon.svg" alt="Loading..." />
+            </div>
+        </div>
+
+        <!-- main header -->
+        <header class="main-header">
+            <!--Header-Upper-->
+            <div class="header-upper black-120-bg">
+                <div class="container clearfix">
+                    <div class="header-inner rel d-flex align-items-center">
+                        <div class="logo-outer">
+                            <div class="logo"><a href="index.html"><img src="assets/images/logo.svg" height="100"
+                                        width="150" alt="Logo" title="Logo"></a></div>
+                        </div>
+
+                        <div class="nav-outer ms-auto clearfix">
+                            <!-- Main Menu -->
+                            <nav class="main-menu navbar-expand-lg">
+                                <div class="navbar-header py-10">
+                                    <div class="mobile-logo">
+                                        <a href="index.html">
+                                            <img src="assets/images/logo.svg" height="50" width="100" alt="Logo"
+                                                title="Logo">
+                                        </a>
+                                    </div>
+
+                                    <!-- Toggle Button -->
+                                    <button type="button" class="navbar-toggle" data-bs-toggle="collapse"
+                                        data-bs-target=".navbar-collapse">
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                    </button>
+                                </div>
+
+                                <div class="navbar-collapse collapse clearfix">
+                                    <ul class="navigation clearfix">
+                                        <li class=""><a href="index.html">Home</a>
+                                        </li>
+                                        <li class="dropdown"><a href="#">Products</a>
+                                            <ul>
+                                                <li class="dropdown1"><img src="./assets/images/Home/Woodne.png"
+                                                        alt=""><a href="product-details.html?doc=wooden-blinds">WOODEN
+                                                        BLINDS</a>
+                                                </li>
+                                                <li class="dropdown1"><img src="./assets/images/Home/Honeycomb.png"
+                                                        alt=""><a
+                                                        href="product-details.html?doc=honeycomb-blinds">HONEYCOMB
+                                                        BLINDS</a></li>
+                                                <li class="dropdown1"><img src="./assets/images/Home/Shangrilla.png"
+                                                        alt=""><a
+                                                        href="product-details.html?doc=shangrila-blinds ">SHANGRI-LA
+                                                        BLINDS</a></li>
+                                                <li class="dropdown1"><img src="./assets/images/Home/Zebra.png"
+                                                        alt=""><a href="product-details.html?doc=zebra-blinds">ZEBRA
+                                                        BLINDS</a>
+                                                </li>
+                                                <li class="dropdown1"><img src="./assets/images/Home/Screen.png"
+                                                        alt=""><a href="product-details.html?doc=screen-blinds">SCREEN
+                                                        BLINDS</a>
+                                                </li>
+                                                <li class="dropdown1"><img src="./assets/images/Home/Blackout.png"
+                                                        alt=""><a
+                                                        href="product-details.html?doc=blackout-blinds">BLACKOUT
+                                                        BLINDS</a></li>
+                                                <li class="dropdown1"><img src="./assets/images/Home/Translucent.png"
+                                                        alt=""><a
+                                                        href="product-details.html?doc=translucent-blinds">TRANSLUCENT
+                                                        BLINDS </a></li>
+                                                <li class="dropdown1"><img src="./assets/images/Home/Roman.png"
+                                                        alt=""><a
+                                                        href="product-details.html?doc=romanstyle-blinds">ROMAN STYLE
+                                                        BLINDS</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="about.html">About</a></li>
+                                        <li class=""><a href="blogs.html">blog</a>
+                                        </li>
+                                        <li><a href="contact.html">Contact</a></li>
+                                    </ul>
+                                </div>
+
+                            </nav>
+                            <!-- Main Menu End-->
+                        </div>
+                    </div>
+                    <form class="search-project search-form mt-96" id="project-search" action="#">
+                        <input type="search" required placeholder="Type to search...">
+                        <button type="submit"><i class="fa fa-search"></i></button>
+                    </form>
+                </div>
+            </div>
+            <!--End Header Upper-->
+        </header>
+
+        <!-- Hero Section Start -->
+        <section class="hero-area mt-92 pb-64 black-120-bg">
+            <div class="container pb-64">
+                <div class="carousel slide" id="recipeCarousel" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#recipeCarousel" data-bs-slide-to="0" class="active"
+                            aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#recipeCarousel" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#recipeCarousel" data-bs-slide-to="2"
+                            aria-label="Slide 3"></button>
+                        <!-- <button type="button" data-bs-target="#recipeCarousel" data-bs-slide-to="3"
+                            aria-label="Slide 4"></button>
+                        <button type="button" data-bs-target="#recipeCarousel" data-bs-slide-to="4"
+                            aria-label="Slide 5"></button> -->
+                    </div>
+                    <div class=" carousel-inner" role="listbox">
+
+                        <div class="row carousel-item active">
+                            <div class="d-flex">
+                                <div class="col-lg-2">
+                                    <h2 class="rotate-hero">DESIGN</h1>
+                                </div>
+                                <div class="col-lg-10 d-flex hero-text-img">
+                                    <div class="hero-content">
+                                        <div class="wow fadeInUp delay-0-2s">
+                                            <h6>Discover Viento’s premium blinds – crafted for modern homes, perfected
+                                                for every mood.</h6>
+                                            <!-- <a href="" class="hero-btn wow fadeInUp delay-0-1s">Read More
+                                                <span class="btn-icon">
+                                                    <span class="circle"></span>
+                                                    <span class="dot"></span>
+                                                    <span class="line"></span>
+                                                    <span class="fa fa-long-arrow-right"></span>
+                                                </span>
+                                            </a> -->
+                                        </div>
+                                    </div>
+                                    <div class="bg-img">
+                                        <a href="">
+                                            <video class="hero-img wow zoomIn" width="915" height="725" autoplay loop
+                                                muted>
+                                                <source src="./assets/images/Home_video.mp4" type="video/mp4">
+                                            </video>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row carousel-item">
+                            <div class="d-flex">
+                                <div class="col-lg-2">
+                                    <h2 class="rotate-hero">CRAFT</h2>
+                                </div>
+                                <div class="col-lg-10 d-flex hero-text-img">
+                                    <div class="hero-content">
+                                        <div class="wow fadeInUp delay-0-2s">
+                                            <h6>From blackout to sheer, Viento blinds blend privacy, style, and sunlight
+                                                control like never before.</h6>
+                                            <!-- <a href="" class="hero-btn wow fadeInUp delay-0-1s">Read More
+                                                <span class="btn-icon">
+                                                    <span class="circle"></span>
+                                                    <span class="dot"></span>
+                                                    <span class="line"></span>
+                                                    <span class="fa fa-long-arrow-right"></span>
+                                                </span>
+                                            </a> -->
+                                        </div>
+                                    </div>
+                                    <div class="bg-img">
+                                        <a href="">
+                                            <video class="hero-img wow zoomIn" width="915" height="725" autoplay loop
+                                                muted>
+                                                <source src="./assets/images/Home_video.mp4" type="video/mp4">
+                                            </video>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row carousel-item">
+                            <div class="d-flex">
+                                <div class="col-lg-2">
+                                    <h4 class="rotate-hero">Luxury</h4>
+                                </div>
+                                <div class="col-lg-10 d-flex hero-text-img">
+                                    <div class="hero-content">
+                                        <div class="wow fadeInUp delay-0-2s">
+                                            <h6>Bring home the perfect balance of beauty and function – with Viento’s
+                                                designer blinds.</h6>
+                                            <!-- <a href="" class="hero-btn wow fadeInUp delay-0-1s">Read More
+                                                <span class="btn-icon">
+                                                    <span class="circle"></span>
+                                                    <span class="dot"></span>
+                                                    <span class="line"></span>
+                                                    <span class="fa fa-long-arrow-right"></span>
+                                                </span>
+                                            </a> -->
+                                        </div>
+                                    </div>
+                                    <div class="bg-img">
+                                        <a href="">
+                                            <video class="hero-img wow zoomIn" width="915" height="725" autoplay loop
+                                                muted>
+                                                <source src="./assets/images/Home_video.mp4" type="video/mp4">
+                                            </video>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <div class="row carousel-item">
+                            <div class="d-flex">
+                                <div class="col-lg-2">
+                                    <h1 class="rotate-hero">Invent</h1>
+                                </div>
+                                <div class="col-lg-10 d-flex hero-text-img">
+                                    <div class="hero-content">
+                                        <div class="wow fadeInUp delay-0-1s">
+                                            <h6>Spectacular home in the Northern Crest of Nuevo Leon, Mexico</h6>
+                                            <a href="project-details-light.html"
+                                                class="hero-btn wow fadeInUp delay-0-1s">Read More
+                                                <span class="btn-icon">
+                                                    <span class="circle"></span>
+                                                    <span class="dot"></span>
+                                                    <span class="line"></span>
+                                                    <span class="fa fa-long-arrow-right"></span>
+                                                </span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="bg-img">
+                                        <a href="project-details-light.html">
+                                            <img class="hero-img" src="assets/images/background/hero-bg-5.jpg"
+                                                alt="hero image" title="hero image">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Hero Section End -->
+
+        <!-- About Area start -->
+        <!-- <section class="about-area py-128">
+            <div class="container d-flex">
+                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <div class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane"
+                            role="tab" aria-selected="true">
+                            <div class="about-content">
+                                <div class="text">
+                                    <h4 class="h4-rotate">1 - WHO WE <span style="color: #E2DA47;">ARE</span></h4>
+                                    <p class="wow fadeInUp delay-0-2s">Born in Mumbai's golden glow, our story began
+                                        with a single vertical blind—a humble stroke in
+                                        a canvas of light. In the quiet of the 1990s, we worked with only a handful of
+                                        shades, our hands
+                                        learning the language of fabric and sun. Back then, every texture was imported,
+                                        every design
+                                        borrowed. But we saw what others didn’t, the potential to redefine the very
+                                        fabric of window
+                                        coverings.</p>
+                                </div>
+                                <div>
+                                    <img class="big-image wow zoomIn" src="assets/images/about/1.png" alt="hero image"
+                                        title="hero image">
+                                    <p class="p-rotate">WHO WE ARE</p>
+                                    <h1 class="number">1</h1>
+                                </div>
+                                <img class="small-image" src="assets/images/about/1-small.png" alt="hero image"
+                                    title="hero image">
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <div class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane"
+                            role="tab" aria-selected="false">
+                            <div class="about-content">
+                                <div class="text">
+                                    <h4 class="h4-rotate">2 - OUR <span style="color: #E2DA47;">MISSION</span></h4>
+                                    <p class="fadeInUp delay-0-2s animated">To master light with textiles—Engineering
+                                        fabrics that command sunlight, not just filter it.</p>
+                                </div>
+                                <div>
+                                    <img class="big-image zoomIn animated" src="assets/images/about/2.png"
+                                        alt="hero image" title="hero image">
+                                    <p class="p-rotate">OUR MISSION</p>
+                                    <h1 class="number">2</h1>
+                                </div>
+                                <img class="small-image" src="assets/images/about/2-small.png" alt="hero image"
+                                    title="hero image">
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <div class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane"
+                            role="tab" aria-selected="false">
+                            <div class="about-content">
+                                <div class="text">
+                                    <h4 class="h4-rotate">3 - OUR <span style="color: #E2DA47;">VISSION</span></h4>
+                                    <p class=" fadeInUp delay-0-2s animated">To redefine architecture itself—where every
+                                        window bends light to its will.</p>
+                                </div>
+                                <div>
+                                    <img class="big-image  zoomIn animated" src="assets/images/about/3.png"
+                                        alt="hero image" title="hero image">
+                                    <p class="p-rotate">OUR VISSION</p>
+                                    <h1 class="number">3</h1>
+                                </div>
+                                <img class="small-image" src="assets/images/about/3-small.png" alt="hero image"
+                                    title="hero image">
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section> -->
+        <!-- About Area end -->
+
+        <!-- Service Section Start -->
+        <section class="service-area black-120-bg py-128 justify-content-center">
+            <div class="container-fluid">
+                <div class="container d-flex section-heading mb-96">
+                    <div class="section-title">
+                        <h2 class="wow fadeInUp delay-0-2s">SERVICES</h2>
+                    </div>
+                    <div class="carousel-buttons">
+                        <button class="prev" type="button" data-bs-target="#servicerecipeCarousel" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"><i
+                                    class="fa fa-long-arrow-left"></i></span>
+                        </button>
+                        <button class="" type="button" data-bs-target="#servicerecipeCarousel" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"><i
+                                    class="fa fa-long-arrow-right"></i></span>
+                        </button>
+                    </div>
+                </div>
+                <div class="carousel slide justify-content-center" id="servicerecipeCarousel" data-bs-ride="carousel">
+                    <div class="carousel-inner" role="listbox">
+                        <div class="carousel-item active">
+                            <div class="col-lg-6 service-act">
+                                <a href="product-details.html?doc=wooden-blinds"><img
+                                        src="assets/images/Home/Woodne.png" alt="service image"></a>
+                                <div class="carousel-caption">
+                                    <div class="big-text mb-16">WOODEN BLINDS</div>
+                                    <a href="product-details.html?doc=wooden-blinds "><span class="right-arrow"><i
+                                                class="fa fa-long-arrow-right"></i></span></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=" carousel-item">
+                            <div class="col-lg-6 service-act">
+                                <a href="product-details.html?doc=honeycomb-blinds"><img
+                                        src="assets/images/Home/Honeycomb.png" alt="service image"></a>
+                                <div class="carousel-caption">
+                                    <div class="big-text mb-16">HONEYCOMB BLINDS</div>
+                                    <a href="product-details.html?doc=honeycomb-blinds"><span class="right-arrow"><i
+                                                class="fa fa-long-arrow-right"></i></span></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=" carousel-item">
+                            <div class="col-lg-6 service-act">
+                                <a href="product-details.html?doc=shangrila-blinds"><img
+                                        src="assets/images/Home/Shangrilla.png" alt="service image"></a>
+                                <div class="carousel-caption">
+                                    <div class="big-text mb-16">Shangri - La Blinds</div>
+                                    <!-- <p class="mb-32">We have several strategic teaming arrangements <br> with
+                                        experienced to complete full design services.</p> -->
+                                    <a href="product-details.html?doc=shangrila-blinds"><span class="right-arrow"><i
+                                                class="fa fa-long-arrow-right"></i></span></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=" carousel-item">
+                            <div class="col-lg-6 service-act">
+                                <a href="product-details.html?doc=zebra-blinds"><img src="assets/images/Home/Zebra.png"
+                                        alt="service image"></a>
+                                <div class="carousel-caption">
+                                    <div class="big-text mb-16">ZEBRA BLINDS</div>
+                                    <!-- <p class="mb-32">We have several strategic teaming arrangements <br> with
+                                        experienced to complete full design services.</p> -->
+                                    <a href="product-details.html?doc=zebra-blinds"><span class="right-arrow"><i
+                                                class="fa fa-long-arrow-right"></i></span></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=" carousel-item">
+                            <div class="col-lg-6 service-act">
+                                <a href="product-details.html?doc=screen-blinds"><img
+                                        src="assets/images/Home/Screen.png" alt="service image"></a>
+                                <div class="carousel-caption">
+                                    <div class="big-text mb-16">SCREEN BLINDS</div>
+                                    <a href="product-details.html?doc=screen-blinds"><span class="right-arrow"><i
+                                                class="fa fa-long-arrow-right"></i></span></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=" carousel-item">
+                            <div class="col-lg-6 service-act">
+                                <a href="product-details.html?doc=blackout-blinds"><img
+                                        src="assets/images/Home/Blackout.png" alt="service image"></a>
+                                <div class="carousel-caption">
+                                    <div class="big-text mb-16">BLACKOUT BLINDS</div>
+                                    <a href="project-details-light.html"><span class="right-arrow"><i
+                                                class="fa fa-long-arrow-right"></i></span></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=" carousel-item">
+                            <div class="col-lg-6 service-act">
+                                <a href="product-details.html?doc=translucent-blinds"><img
+                                        src="assets/images/Home/Translucent.png" alt="service image"></a>
+                                <div class="carousel-caption">
+                                    <div class="big-text mb-16">TRANSLUCENT BLINDS</div>
+                                    <a href="project-details-light.html"><span class="right-arrow"><i
+                                                class="fa fa-long-arrow-right"></i></span></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=" carousel-item">
+                            <div class="col-lg-6 service-act">
+                                <a href="product-details.html?doc=romanstyle-blinds"><img
+                                        src="assets/images/Home/Roman.png" alt="service image"></a>
+                                <div class="carousel-caption">
+                                    <div class="big-text mb-16">ROMAN STYLE BLINDS</div>
+                                    <a href="project-details-light.html"><span class="right-arrow"><i
+                                                class="fa fa-long-arrow-right"></i></span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Services Section End -->
+
+
+
+
+        <!-- Architecture Projects Area start -->
+        <!-- <section class="architecture-area py-128">
+            <div class="container">
+                <div class="row rel z-1 justify-content-center">
+                    <div class="section-title text-center mb-96 wow fadeInUp delay-0-2s">
+                        <span class="sub-title mb-16">ARCHITECTURE PROJECTS</span>
+                        <h2>LATEST WORKS</h2> 
+                    </div>
+                </div>
+                <ul class="project-filter tab-style-one justify-content-center nav nav-pills nav-fill mb-96 wow fadeInUp delay-0-4s">
+                    <li data-filter="*" class="nav-item current">
+                        <a class="nav-link">ALL</a>
+                    </li>
+                    <li class="nav-item" data-filter=".ARCHITECTURE">
+                        <a class="nav-link">ARCHITECTURE</a>
+                    </li>
+                    <li class="nav-item" data-filter=".LANDSCAPE">
+                        <a class="nav-link">LANDSCAPE</a>
+                    </li>
+                    <li class="nav-item" data-filter=".DESIGN">
+                        <a class="nav-link">DESIGN</a>
+                    </li>
+                    <li class="nav-item" data-filter=".INTERIOR">
+                        <a class="nav-link">INTERIOR</a>
+                    </li>
+                </ul>
+                <div class="tab-content tab-pane project-active">
+                    <div class="col-lg-12 item ARCHITECTURE LANDSCAPE">                        
+                        <div class="row apartment-image wow fadeInLeft delay-0-1s">
+                            <a href="project-details.html"><img src="assets/images/architecture-projects/1.jpg" alt="Apartment"></a>
+                        </div>                    
+                        <div class="row apartment-content wow fadeInRight delay-0-1s rp-0">
+                            <div class="col-lg-6 pro-title">
+                                <a href="project-details.html"><h3>HOUSE DESIGN</h3></a>
+                                <span class="category">ARCHITECTURE / LANDSCAPE</span>
+                            </div>
+                            <div class="col-lg-6 pro-desc">
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.</p>
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.</p>
+                            </div>
+                        </div>                    
+                    </div>
+                    <div class="col-lg-6 item ARCHITECTURE">
+                        <div class="row apartment-image wow fadeInLeft delay-0-1s">
+                            <a href="project-details.html"><img src="assets/images/architecture-projects/2.jpg" alt="Apartment"></a>
+                        </div>
+                    
+                        <div class="row apartment-content wow fadeInRight delay-0-1s rp-0">
+                            <div class="pro-title-haft">
+                                <a href="project-details.html"><h3>VILLA</h3></a>
+                                <span class="category">ARCHITECTURE</span>
+                            </div>
+                            <div class="pro-desc-haft">
+                                <p>Lorem Ipsumis simply dummy text of the printing.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 item INTERIOR">
+                        <div class="row apartment-image wow fadeInLeft delay-0-1s">
+                            <a href="project-details.html"><img src="assets/images/architecture-projects/3.jpg" alt="Apartment"></a>
+                        </div>
+                    
+                        <div class="row apartment-content wow fadeInRight delay-0-1s rp-0">
+                            <div class="pro-title-haft">
+                                <a href="project-details.html"><h3>HOUSE</h3></a>
+                                <span class="category">INTERIOR</span>
+                            </div>
+                            <div class="pro-desc-haft">
+                                <p>Lorem Ipsumis simply dummy text of the printing.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-12 item DESIGN">                        
+                        <div class="row apartment-image wow fadeInLeft delay-0-1s">
+                            <a href="project-details.html"><img src="assets/images/architecture-projects/4.jpg" alt="Apartment"></a>
+                        </div>                    
+                        <div class="row apartment-content wow fadeInRight delay-0-1s rp-0">
+                            <div class="col-lg-6 pro-title">
+                                <a href="project-details.html"><h3>MODERN HOUSE</h3></a>
+                                <span class="category">DESIGN</span>
+                            </div>
+                            <div class="col-lg-6 pro-desc">
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.</p>
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.</p>
+                            </div>
+                        </div>                    
+                    </div>
+                    <div class="col-lg-12 text-center">
+                        <button class="loadmore primary-readmore mt-0" type="submit">MORE PROJECTS</button>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+        <!-- Architecture Projects Area end -->
+
+        <!-- Interior Projects Section Start -->
+        <!-- <section class="interior-area black-110-bg py-128 justify-content-center">
+            <div class="container-fluid">
+                <div class="container rel z-1 justify-content-center text-center">
+                    <div class="text-center mb-96 wow fadeInUp delay-0-2s">
+                        <span class="sub-title mb-16">INTERIOR PROJECTS</span>
+                        <h2>LATEST WORKS</h2> 
+                    </div>         
+                </div>
+                <div class="container section-heading">
+                    <div class="nav-fill-left">
+                        <ul class="tab-style-one nav nav-pills nav-fill mb-96 wow fadeInUp delay-0-4s">
+                            <li class="nav-item">
+                                <a class="nav-link active" data-bs-toggle="tab" href="#inter-tap1">ALL</a>
+                                <div class="carousel-buttons">
+                                    <button class="prev" type="button" data-bs-target="#interiorrecipeCarousel1" data-bs-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"><i class="fa fa-long-arrow-left"></i></span>
+                                    </button>
+                                    <button class="" type="button" data-bs-target="#interiorrecipeCarousel1" data-bs-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"><i class="fa fa-long-arrow-right"></i></span>
+                                    </button>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-bs-toggle="tab" href="#inter-tap2">HOUSE</a>
+                                <div class="carousel-buttons">
+                                    <button class="prev" type="button" data-bs-target="#interiorrecipeCarousel2" data-bs-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"><i class="fa fa-long-arrow-left"></i></span>
+                                    </button>
+                                    <button class="" type="button" data-bs-target="#interiorrecipeCarousel2" data-bs-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"><i class="fa fa-long-arrow-right"></i></span>
+                                    </button>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-bs-toggle="tab" href="#inter-tap3">VILLA</a>
+                                <div class="carousel-buttons">
+                                    <button class="prev" type="button" data-bs-target="#interiorrecipeCarousel3" data-bs-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"><i class="fa fa-long-arrow-left"></i></span>
+                                    </button>
+                                    <button class="" type="button" data-bs-target="#interiorrecipeCarousel3" data-bs-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"><i class="fa fa-long-arrow-right"></i></span>
+                                    </button>
+                                </div> 
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-bs-toggle="tab" href="#inter-tap4">RESTAURANT</a>
+                                <div class="carousel-buttons">
+                                    <button class="prev" type="button" data-bs-target="#interiorrecipeCarousel4" data-bs-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"><i class="fa fa-long-arrow-left"></i></span>
+                                    </button>
+                                    <button class="" type="button" data-bs-target="#interiorrecipeCarousel4" data-bs-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"><i class="fa fa-long-arrow-right"></i></span>
+                                    </button>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-bs-toggle="tab" href="#inter-tap5">HOTEL</a>
+                                <div class="carousel-buttons">
+                                    <button class="prev" type="button" data-bs-target="#interiorrecipeCarousel5" data-bs-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"><i class="fa fa-long-arrow-left"></i></span>
+                                    </button>
+                                    <button class="" type="button" data-bs-target="#interiorrecipeCarousel5" data-bs-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"><i class="fa fa-long-arrow-right"></i></span>
+                                    </button>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>                   
+                </div>                  
+                <div class="tab-content">
+                    <div class="tab-pane fade show active" id="inter-tap1">                         
+                        <div class="carousel slide interior-nav" id="interiorrecipeCarousel1" data-bs-ride="carousel">
+                            <div class="carousel-inner" role="listbox">
+                                <div class="carousel-item active">
+                                    <div class="col-lg-6 interior-act">
+                                        <a href="project-details-light.html"><img class="zoomIn" src="assets/images/interior/1.jpg" alt="project image"></a>
+                                        <div class="carousel-caption">
+                                            <span class="sub-title mb-16">VILLA ROOM</span>
+                                            <a href="project-details-light.html"><h5 class="mb-32">Villa Room Design Indochine Style </h5></a>
+                                            <p class="mb-32">We have several strategic teaming arrangements  with experienced to complete full design services.</p>
+                                            <a href="project-details-light.html" class="hero-btn wow fadeInUp delay-0-1s">Read More
+                                                <span class="btn-icon">
+                                                    <span class="circle"></span>
+                                                    <span class="dot"></span>
+                                                    <span class="line"></span>
+                                                    <span class="fa fa-long-arrow-right"></span>
+                                                </span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class=" carousel-item">                
+                                    <div class="col-lg-6 interior-act">
+                                        <a href="project-details-light.html"><img src="assets/images/interior/2.jpg" alt="project image"></a>
+                                        <div class="carousel-caption">
+                                            <span class="sub-title mb-16">LIVING ROOM</span>
+                                            <a href="project-details-light.html"><h5 class="mb-32">Living Room Design Classic Style </h5></a>
+                                            <p class="mb-32">We have several strategic teaming arrangements  with experienced to complete full design services.</p>
+                                            <a href="project-details-light.html" class="hero-btn">Read More
+                                                <span class="btn-icon">
+                                                    <span class="circle"></span>
+                                                    <span class="dot"></span>
+                                                    <span class="line"></span>
+                                                    <span class="fa fa-long-arrow-right"></span>
+                                                </span>
+                                            </a>
+                                        </div>
+                                    </div> 
+                                </div>
+                                <div class=" carousel-item">
+                                    <div class="col-lg-6 interior-act">
+                                        <a href="project-details-light.html"><img src="assets/images/interior/3.jpg" alt="project image"></a>
+                                        <div class="carousel-caption">
+                                            <span class="sub-title mb-16">WORK ROOM</span>
+                                            <a href="project-details-light.html"><h5 class="mb-32">Work Room Design Modern Style </h5></a>
+                                            <p class="mb-32">We have several strategic teaming arrangements  with experienced to complete full design services.</p>
+                                            <a href="project-details-light.html" class="hero-btn">Read More
+                                                <span class="btn-icon">
+                                                    <span class="circle"></span>
+                                                    <span class="dot"></span>
+                                                    <span class="line"></span>
+                                                    <span class="fa fa-long-arrow-right"></span>
+                                                </span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class=" carousel-item">
+                                    <div class="col-lg-6 interior-act">
+                                        <a href="project-details-light.html"><img src="assets/images/interior/4.jpg" alt="project image"></a>
+                                        <div class="carousel-caption">
+                                            <span class="sub-title mb-16">OPEN SPACE</span>
+                                            <a href="project-details-light.html"><h5 class="mb-32">Open Space Minimalism Style </h5></a>
+                                            <p class="mb-32">We have several strategic teaming  arrangements  with experienced to complete full design services.</p>
+                                            <a href="project-details-light.html" class="hero-btn">Read More
+                                                <span class="btn-icon">
+                                                    <span class="circle"></span>
+                                                    <span class="dot"></span>
+                                                    <span class="line"></span>
+                                                    <span class="fa fa-long-arrow-right"></span>
+                                                </span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class=" carousel-item">
+                                    <div class="col-lg-6 interior-act">
+                                        <a href="project-details-light.html"><img src="assets/images/interior/5.jpg" alt="project image"></a>
+                                        <div class="carousel-caption">
+                                            <span class="sub-title mb-16">KITCHEN</span>
+                                            <a href="project-details-light.html"><h5 class="mb-32">Kitchen Design Modern Style </h5></a>
+                                            <p class="mb-32">We have several strategic teaming  arrangements  with experienced to complete full design services.</p>
+                                            <a href="project-details-light.html" class="hero-btn">Read More
+                                                <span class="btn-icon">
+                                                    <span class="circle"></span>
+                                                    <span class="dot"></span>
+                                                    <span class="line"></span>
+                                                    <span class="fa fa-long-arrow-right"></span>
+                                                </span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>  
+                    </div>
+                    <div class="tab-pane fade show" id="inter-tap2">                          
+                        <div class="carousel slide interior-nav" id="interiorrecipeCarousel2" data-bs-ride="carousel">
+                            <div class="carousel-inner" role="listbox">
+                                <div class=" carousel-item active">
+                                    <div class="col-lg-6 interior-act">
+                                        <a href="project-details-light.html"><img src="assets/images/interior/6.jpg" alt="project image"></a>
+                                        <div class="carousel-caption">
+                                            <span class="sub-title mb-16">BEDROOM</span>
+                                            <a href="project-details-light.html"><h5 class="mb-32">Bedroom Design Classic Style </h5></a>
+                                            <p class="mb-32">We have several strategic teaming  arrangements  with experienced to complete full design services.</p>
+                                            <a href="project-details-light.html" class="hero-btn">Read More
+                                                <span class="btn-icon">
+                                                    <span class="circle"></span>
+                                                    <span class="dot"></span>
+                                                    <span class="line"></span>
+                                                    <span class="fa fa-long-arrow-right"></span>
+                                                </span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>                               
+                                <div class=" carousel-item">
+                                    <div class="col-lg-6 interior-act">
+                                        <a href="project-details-light.html"><img src="assets/images/interior/7.jpg" alt="project image"></a>
+                                        <div class="carousel-caption">
+                                            <span class="sub-title mb-16">LIVING ROOM</span>
+                                            <a href="project-details-light.html"><h5 class="mb-32">Living Room Minimalism Style </h5></a>
+                                            <p class="mb-32">We have several strategic teaming  arrangements  with experienced to complete full design services.</p>
+                                            <a href="project-details-light.html" class="hero-btn">Read More
+                                                <span class="btn-icon">
+                                                    <span class="circle"></span>
+                                                    <span class="dot"></span>
+                                                    <span class="line"></span>
+                                                    <span class="fa fa-long-arrow-right"></span>
+                                                </span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class=" carousel-item">
+                                    <div class="col-lg-6 interior-act">
+                                        <a href="project-details-light.html"><img src="assets/images/interior/1.jpg" alt="project image"></a>
+                                        <div class="carousel-caption">
+                                            <span class="sub-title mb-16">VILLA ROOM</span>
+                                            <a href="project-details-light.html"><h5 class="mb-32">Villa Room Design Modern Style </h5></a>
+                                            <p class="mb-32">We have several strategic teaming  arrangements  with experienced to complete full design services.</p>
+                                            <a href="project-details-light.html" class="hero-btn">Read More
+                                                <span class="btn-icon">
+                                                    <span class="circle"></span>
+                                                    <span class="dot"></span>
+                                                    <span class="line"></span>
+                                                    <span class="fa fa-long-arrow-right"></span>
+                                                </span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>  
+                    </div>
+                    <div class="tab-pane fade show" id="inter-tap3">                   
+                        <div class="carousel slide interior-nav" id="interiorrecipeCarousel3" data-bs-ride="carousel">
+                            <div class="carousel-inner" role="listbox">                             
+                                <div class=" carousel-item active">
+                                    <div class="col-lg-6 interior-act">
+                                        <a href="project-details-light.html"><img src="assets/images/interior/8.jpg" alt="project image"></a>
+                                        <div class="carousel-caption">
+                                            <span class="sub-title mb-16">COZY ROOM</span>
+                                            <a href="project-details-light.html"><h5 class="mb-32">Cozy Room Minimalism Style </h5></a>
+                                            <p class="mb-32">We have several strategic teaming  arrangements  with experienced to complete full design services.</p>
+                                            <a href="project-details-light.html" class="hero-btn">Read More
+                                                <span class="btn-icon">
+                                                    <span class="circle"></span>
+                                                    <span class="dot"></span>
+                                                    <span class="line"></span>
+                                                    <span class="fa fa-long-arrow-right"></span>
+                                                </span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>  
+                                <div class=" carousel-item">
+                                    <div class="col-lg-6 interior-act">
+                                        <a href="project-details-light.html"><img src="assets/images/interior/1.jpg" alt="project image"></a>
+                                        <div class="carousel-caption">
+                                            <span class="sub-title mb-16">VILLA ROOM</span>
+                                            <a href="project-details-light.html"><h5 class="mb-32">Villa Room Design Modern Style </h5></a>
+                                            <p class="mb-32">We have several strategic teaming arrangements  with experienced to complete full design services.</p>
+                                            <a href="project-details-light.html" class="hero-btn">Read More
+                                                <span class="btn-icon">
+                                                    <span class="circle"></span>
+                                                    <span class="dot"></span>
+                                                    <span class="line"></span>
+                                                    <span class="fa fa-long-arrow-right"></span>
+                                                </span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class=" carousel-item">
+                                    <div class="col-lg-6 interior-act">
+                                        <a href="project-details-light.html"><img src="assets/images/interior/5.jpg" alt="project image"></a>
+                                        <div class="carousel-caption">
+                                            <span class="sub-title mb-16">KITCHEN</span>
+                                            <a href="project-details-light.html"><h5 class="mb-32">Kitchen Design Minimalism Style </h5></a>
+                                            <p class="mb-32">We have several strategic teaming arrangements  with experienced to complete full design services.</p>
+                                            <a href="project-details-light.html" class="hero-btn">Read More
+                                                <span class="btn-icon">
+                                                    <span class="circle"></span>
+                                                    <span class="dot"></span>
+                                                    <span class="line"></span>
+                                                    <span class="fa fa-long-arrow-right"></span>
+                                                </span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>  
+                    </div>
+                    <div class="tab-pane fade show" id="inter-tap4">            
+                        <div class="carousel slide interior-nav" id="interiorrecipeCarousel4" data-bs-ride="carousel">
+                            <div class="carousel-inner" role="listbox">
+                                <div class=" carousel-item active">
+                                    <div class="col-lg-6 interior-act">
+                                        <a href="project-details-light.html"><img src="assets/images/interior/9.jpg" alt="project image"></a>
+                                        <div class="carousel-caption">
+                                            <span class="sub-title mb-16">ROOM DECOR</span>
+                                            <a href="project-details-light.html"><h5 class="mb-32">Room Decor Minimalism Style </h5></a>
+                                            <p class="mb-32">We have several strategic teaming arrangements  with experienced to complete full design services.</p>
+                                            <a href="project-details-light.html" class="hero-btn">Read More
+                                                <span class="btn-icon">
+                                                    <span class="circle"></span>
+                                                    <span class="dot"></span>
+                                                    <span class="line"></span>
+                                                    <span class="fa fa-long-arrow-right"></span>
+                                                </span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class=" carousel-item">
+                                    <div class="col-lg-6 interior-act">
+                                        <a href="project-details-light.html"><img src="assets/images/interior/5.jpg" alt="project image"></a>
+                                        <div class="carousel-caption">
+                                            <span class="sub-title mb-16">FURNITURE DECOR</span>
+                                            <a href="project-details-light.html"><h5 class="mb-32">Furniture Decor Minimalism Style </h5></a>
+                                            <p class="mb-32">We have several strategic teaming  arrangements  with experienced to complete full design services.</p>
+                                            <a href="project-details-light.html" class="hero-btn">Read More
+                                                <span class="btn-icon">
+                                                    <span class="circle"></span>
+                                                    <span class="dot"></span>
+                                                    <span class="line"></span>
+                                                    <span class="fa fa-long-arrow-right"></span>
+                                                </span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class=" carousel-item">
+                                    <div class="col-lg-6 interior-act">
+                                        <a href="project-details-light.html"><img src="assets/images/interior/1.jpg" alt="project image"></a>
+                                        <div class="carousel-caption">
+                                            <span class="sub-title mb-16">VILLA ROOM</span>
+                                            <a href="project-details-light.html"><h5 class="mb-32">Villa Room Design Modern Style </h5></a>
+                                            <p class="mb-32">We have several strategic teaming arrangements  with experienced to complete full design services.</p>
+                                            <a href="project-details-light.html" class="hero-btn">Read More
+                                                <span class="btn-icon">
+                                                    <span class="circle"></span>
+                                                    <span class="dot"></span>
+                                                    <span class="line"></span>
+                                                    <span class="fa fa-long-arrow-right"></span>
+                                                </span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>  
+                            </div>
+                        </div>  
+                    </div>
+                    <div class="tab-pane fade show" id="inter-tap5">                             
+                        <div class="carousel slide interior-nav" id="interiorrecipeCarousel5" data-bs-ride="carousel">
+                            <div class="carousel-inner" role="listbox">
+                                <div class=" carousel-item active">
+                                    <div class="col-lg-6 interior-act">
+                                        <a href="project-details-light.html"><img src="assets/images/interior/10.jpg" alt="project image"></a>
+                                        <div class="carousel-caption">
+                                            <span class="sub-title mb-16">FURNITURE DECOR</span>
+                                            <a href="project-details-light.html"><h5 class="mb-32">Furniture Decor Minimalism Style </h5></a>
+                                            <p class="mb-32">We have several strategic teaming arrangements  with experienced to complete full design services.</p>
+                                            <a href="project-details-light.html" class="hero-btn">Read More
+                                                <span class="btn-icon">
+                                                    <span class="circle"></span>
+                                                    <span class="dot"></span>
+                                                    <span class="line"></span>
+                                                    <span class="fa fa-long-arrow-right"></span>
+                                                </span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class=" carousel-item">
+                                    <div class="col-lg-6 interior-act">
+                                        <a href="project-details-light.html"><img src="assets/images/interior/1.jpg" alt="project image"></a>
+                                        <div class="carousel-caption">
+                                            <span class="sub-title mb-16">VILLA ROOM</span>
+                                            <a href="project-details-light.html"><h5 class="mb-32">Villa Room Design Modern Style </h5></a>
+                                            <p class="mb-32">We have several strategic teaming arrangements  with experienced to complete full design services.</p>
+                                            <a href="project-details-light.html" class="hero-btn">Read More
+                                                <span class="btn-icon">
+                                                    <span class="circle"></span>
+                                                    <span class="dot"></span>
+                                                    <span class="line"></span>
+                                                    <span class="fa fa-long-arrow-right"></span>
+                                                </span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class=" carousel-item">
+                                    <div class="col-lg-6 interior-act">
+                                        <a href="project-details-light.html"><img src="assets/images/interior/2.jpg" alt="project image"></a>
+                                        <div class="carousel-caption">
+                                            <span class="sub-title mb-16">LIVING ROOM</span>
+                                            <a href="project-details-light.html"><h5 class="mb-32">Living Room Design Modern Style </h5></a>
+                                            <p class="mb-32">We have several strategic teaming arrangements  with experienced to complete full design services.</p>
+                                            <a href="project-details-light.html" class="hero-btn">Read More
+                                                <span class="btn-icon">
+                                                    <span class="circle"></span>
+                                                    <span class="dot"></span>
+                                                    <span class="line"></span>
+                                                    <span class="fa fa-long-arrow-right"></span>
+                                                </span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>  
+                            </div>
+                        </div>  
+                    </div>
+                </div>                                                             
+            </div>
+        </section> -->
+        <!-- Interior Projects Section End -->
+
+        <!-- Timeline Area start -->
+        <section class="timeline-area py-128 black-90-bg">
+            <div class="container">
+                <div class="row section-heading mb-96">
+                    <div class="section-title  col-sm-6 col-lg-6">
+                        <h2 class="wow fadeInUp delay-0-2s">WORK PROCESS</h2>
+                    </div>
+                    <div class="button  col-sm-6 col-lg-6">
+                        <a class="theme-btn" href="contact.html">Contact Us</a>
+                    </div>
+                </div>
+                <div class="row align-items-center">
+                    <div class=" col-md-2 col-lg-2">
+                        <div class="timeline-content wow fadeInRight delay-0-2s">
+                            <div class="timeline-item">
+                                <img class="ishow" src="assets/images/work-process/ruler-black.png" alt="ruler image">
+                                <img class="ifade" src="assets/images/work-process/ruler-3.png" alt="ruler image">
+                                <div class="icon h2">01</div>
+
+                            </div>
+                            <div class="timeline-item">
+                                <img class="ishow" src="assets/images/work-process/ruler-black.png" alt="ruler image">
+                                <img class="ifade" src="assets/images/work-process/ruler-3.png" alt="ruler image">
+                                <div class="icon h2">02</div>
+
+                            </div>
+                            <div class="timeline-item">
+                                <img class="ishow" src="assets/images/work-process/ruler-black.png" alt="ruler image">
+                                <img class="ifade" src="assets/images/work-process/ruler-3.png" alt="ruler image">
+                                <div class="icon h2">03</div>
+
+                            </div>
+                            <div class="timeline-item">
+                                <img class="ishow" src="assets/images/work-process/ruler-black.png" alt="ruler image">
+                                <img class="ifade" src="assets/images/work-process/ruler-3.png" alt="ruler image">
+                                <div class="icon h2">04</div>
+
+                            </div>
+                            <div class="timeline-item">
+                                <img class="ishow" src="assets/images/work-process/ruler-black.png" alt="ruler image">
+                                <img class="ifade" src="assets/images/work-process/ruler-3.png" alt="ruler image">
+                                <div class="icon h2">05</div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class=" col-md-10 col-lg-10">
+                        <div class="timeline-images wow fadeInLeft delay-0-1s">
+                            <div class="row d-flex ">
+                                <div class="content">
+                                    <span class="h5 title">Superior Light Control & Privacy</span>
+                                    <p class="description">Viento blinds offer precise control over how light enters
+                                        your space—whether you want brightness, softness, or complete blackout. And
+                                        while you shape the mood, your privacy stays protected with fabrics designed to
+                                        shield without compromising style.</p>
+                                </div>
+                                <img src="assets/images/work-process/1.jpg" alt="Timeline">
+                            </div>
+                            <div>
+                                <div class="content">
+                                    <span class="h5 title">Premium Material Durability</span>
+                                    <p class="description">Crafted from high-quality, tested materials, Viento blinds
+                                        are built to last. Our fabrics resist fading, warping, and wear—ensuring they
+                                        stay as beautiful and functional as the day they're installed, even with daily
+                                        use and changing seasons.</p>
+                                </div>
+                                <img src="assets/images/work-process/2.jpg" alt="Timeline">
+                            </div>
+                            <div>
+                                <div class="content">
+                                    <span class="h5 title">Energy Efficiency & Insulation</span>
+                                    <p class="description">Viento blinds do more than control light—they help regulate
+                                        temperature too. By reducing heat gain in summer and retaining warmth in winter,
+                                        our fabrics improve insulation and lower energy costs, making your space more
+                                        comfortable and efficient year-round.</p>
+                                </div>
+                                <img src="assets/images/work-process/3.jpg" alt="Timeline">
+                            </div>
+                            <div>
+                                <div class="content">
+                                    <span class="h5 title">UV Protection & Fade Resistance</span>
+                                    <p class="description">Viento blinds are designed to block harmful UV rays,
+                                        protecting your interiors from sun damage. Our fade-resistant fabrics help
+                                        preserve the color and quality of your furniture, flooring, and décor—so your
+                                        space stays vibrant, longer.</p>
+                                </div>
+                                <img src="assets/images/work-process/4.jpg" alt="Timeline">
+                            </div>
+                            <div>
+                                <div class="content">
+                                    <span class="h5 title">Smart Automation Compatibility</span>
+                                    <p class="description">Viento blinds integrate seamlessly with leading smart home
+                                        systems, allowing you to control light and privacy with a simple voice command
+                                        or tap. Set schedules, automate scenes, and adjust your blinds remotely—for
+                                        comfort, convenience, and modern living at its finest.</p>
+                                </div>
+                                <img src="assets/images/work-process/5.jpg" alt="Timeline">
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- slider-image -->
+        <main>
+            <div class="yt-wrapper">
+                <iframe src="https://www.youtube.com/embed/dzqDU9efnnk" title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </div>
+            <div class="slider-wrapper">
+                <div class="slider-images">
+                    <img class="slider-after img-item" src="./assets/images/Home/Before.png" alt="black and white" />
+                    <img class="slider-before img-item" src="./assets/images/Home/After.png" alt="color photo" />
+                </div>
+
+                <input type="range" min="0" max="100" value="50" class="slider-control" aria-label="Slider range" />
+                <div class="slider-divider" aria-hidden="true"></div>
+                <div class="slider-handle" aria-hidden="true">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                        viewBox="0 0 256 256">
+                        <rect width="256" height="256" fill="none"></rect>
+                        <line x1="128" y1="40" x2="128" y2="216" stroke="currentColor" stroke-linecap="round"
+                            stroke-linejoin="round" stroke-width="16"></line>
+                        <line x1="96" y1="128" x2="16" y2="128" stroke="currentColor" stroke-linecap="round"
+                            stroke-linejoin="round" stroke-width="16"></line>
+                        <polyline points="48 160 16 128 48 96" stroke="currentColor" stroke-linecap="round"
+                            stroke-linejoin="round" stroke-width="16" fill="none"></polyline>
+                        <line x1="160" y1="128" x2="240" y2="128" stroke="currentColor" stroke-linecap="round"
+                            stroke-linejoin="round" stroke-width="16"></line>
+                        <polyline points="208 96 240 128 208 160" stroke="currentColor" stroke-linecap="round"
+                            stroke-linejoin="round" stroke-width="16" fill="none"></polyline>
+                    </svg>
+                </div>
+            </div>
+
+            <div class="yt-wrapper">
+                <iframe src="https://www.youtube.com/embed/dzqDU9efnnk" title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </div>
+        </main>
+
+
+
+
+        <!-- Reviews Area start -->
+        <section class="reviews-area black-100-bg" style="padding: 55px 0;">
+            <div class="container">
+                <h2 class="testimonial-heading text-left mb-32"
+                    style="margin-left: 2%;">
+                    Hear From Our Valued Customers
+                </h2>
+                <div class="testimonials-slider wow fadeInUp delay-0-4s">
+
+                    <div class="review-container">
+                        <div class="review-grid">
+                            <div class="review-image-box" id="review-image-box"></div>
+                            <div class="review-content">
+                                <div>
+                                    <h3 class="review-name" id="review-name"></h3>
+                                    <p class="review-role" id="review-role"></p>
+                                    <p class="review-text" id="review-text"></p>
+                                </div>
+                                <div class="review-arrows">
+                                    <button class="review-btn review-prev" id="review-prev">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                            <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" />
+                                        </svg>
+                                    </button>
+                                    <button class="review-btn review-next" id="review-next">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                            <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" />
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <!-- Reviews Area end -->
+
+
+        <!-- slider -->
+
+        <div class="container-fluid1">
+            <div class="bg-light section-logos__wrapper-items">
+                <div class="logo-slider">
+                    <div class="logo-slide-track">
+                        <!-- First set of logos -->
+                        <div class="logo-slide">
+                            <img src="./assets/images/Clientile/Client images/client images-01.png" alt="" />
+                        </div>
+                        <div class="logo-slide">
+                            <img src="./assets/images/Clientile/Client images/client images-02.png" alt="" />
+                        </div>
+                        <div class="logo-slide">
+                            <img src="./assets/images/Clientile/Client images/client images-03.png" alt="" />
+                        </div>
+                        <div class="logo-slide">
+                            <img src="./assets/images/Clientile/Client images/client images-04.png" alt="" />
+                        </div>
+                        <div class="logo-slide">
+                            <img src="./assets/images/Clientile/Client images/client images-05.png" alt="" />
+                        </div>
+                        <div class="logo-slide">
+                            <img src="./assets/images/Clientile/Client images/client images-06.png" alt="" />
+                        </div>
+                        <div class="logo-slide">
+                            <img src="./assets/images/Clientile/Client images/client images-07.png" alt="" />
+                        </div>
+                        <div class="logo-slide">
+                            <img src="./assets/images/Clientile/Client images/client images-08.png" alt="" />
+                        </div>
+
+                        <!-- Duplicate set for seamless loop -->
+                        <div class="logo-slide">
+                            <img src="./assets/images/Clientile/Client images/client images-01.png" alt="" />
+                        </div>
+                        <div class="logo-slide">
+                            <img src="./assets/images/Clientile/Client images/client images-02.png" alt="" />
+                        </div>
+                        <div class="logo-slide">
+                            <img src="./assets/images/Clientile/Client images/client images-03.png" alt="" />
+                        </div>
+                        <div class="logo-slide">
+                            <img src="./assets/images/Clientile/Client images/client images-04.png" alt="" />
+                        </div>
+                        <div class="logo-slide">
+                            <img src="./assets/images/Clientile/Client images/client images-05.png" alt="" />
+                        </div>
+                        <div class="logo-slide">
+                            <img src="./assets/images/Clientile/Client images/client images-06.png" alt="" />
+                        </div>
+                        <div class="logo-slide">
+                            <img src="./assets/images/Clientile/Client images/client images-07.png" alt="" />
+                        </div>
+                        <div class="logo-slide">
+                            <img src="./assets/images/Clientile/Client images/client images-08.png" alt="" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <style>
+            .logo-slider {
+                height: 200px;
+                position: relative;
+                width: 100%;
+                overflow: hidden;
+            }
+
+            .logo-slide-track {
+                animation: scroll 40s linear infinite;
+                display: flex;
+                width: calc(200px * 16);
+                /* Adjust based on logo count */
+            }
+
+            .logo-slide {
+                width: 200px;
+                height: 200px;
+                padding: 20px;
+                flex-shrink: 0;
+                opacity: 0;
+                transition: opacity 0.5s ease-in-out;
+            }
+
+            .logo-slide img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+
+            .logo-slider::before,
+            .logo-slider::after {
+                content: "";
+                height: 100%;
+                position: absolute;
+                width: 200px;
+                z-index: 2;
+            }
+
+            .logo-slider::before {
+                left: 0;
+                background: linear-gradient(to right, #fff 0%, transparent 100%);
+            }
+
+            .logo-slider::after {
+                right: 0;
+                background: linear-gradient(to left, #fff 0%, transparent 100%);
+            }
+
+            @keyframes scroll {
+                0% {
+                    transform: translateX(0);
+                }
+
+                100% {
+                    transform: translateX(calc(-200px * 8));
+                    /* Half of total width */
+                }
+            }
+
+            .logo-slide-track:hover {
+                animation-play-state: paused;
+            }
+
+            .logo-slide.visible {
+                opacity: 1;
+            }
+        </style>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                const slides = document.querySelectorAll('.logo-slide');
+
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('visible');
+                        } else {
+                            entry.target.classList.remove('visible');
+                        }
+                    });
+                }, {
+                    threshold: 0.5
+                });
+
+                slides.forEach(slide => {
+                    observer.observe(slide);
+                });
+            });
+        </script>
+
+        <!-- CTA Area start -->
+        <section class="cta-area pt-140 pb-110 bgs-cover" style="position: relative;">
+            <!-- <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5);"></div> -->
+            <div
+                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-image: url(assets/images/Home/blinds-window.jpg); background-size: cover; z-index: -1;">
+            </div>
+            <div class="container" style="position: relative; z-index: 1;">
+                <div class="row justify-content-center">
+                    <div class="video-content-part text-center wow fadeInUp delay-0-2s">
+                        <h2 class="main-title"
+                            style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 2;">
+                            <span style="visibility: hidden;">Premium Blinds</span>
+                            <span class="top-slice">Premium Blinds</span>
+                            <span class="bottom-slice">Premium Blinds</span>
+                            <span class="highlight-bar">Viento Blinds</span>
+                        </h2>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- CTA Area end -->
+
+        <!-- Blog Area start -->
+        <section class="blog-area blog-home py-128 black-100-bg">
+            <div class="container">
+                <div class="row section-heading mb-96">
+                    <div class="section-title col-sm-6 col-lg-6">
+                        <h2 class="wow fadeInUp delay-0-2s">LATEST BLOGS</h2>
+                    </div>
+                    <div class="button col-sm-6 col-lg-6">
+                        <a class="theme-btn" href="blogs.html">More Blogs</a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4 item text-center" style="height: 731px;">
+                        <div class="blog-item wow fadeInUp delay-0-2s black-30-bg ">
+                            <div class="content ">
+                                <h6><a href="blog-details-light.html">Transform Your Space : How Window Blinds Influence
+                                        Interior Design</a></h6>
+                                <hr>
+                                <span><i class="fal fa-calendar-alt"></i> 15 March</span>
+                                <div class="image">
+                                    <img src="assets/images/Blogs/Blog_3_resized.webp" alt="Blog">
+                                </div>
+                                <a href="blog-details-1.html" class="theme-btn">Read more</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="col-lg-4 item text-center">
+                        <div class="blog-item wow fadeInUp delay-0-2s black-120-bg ">
+                            <div class="content ">
+                                <h6><a href="blog-details-light.html">Best Design Tips</a></h6>
+                                <hr>
+                                <span><i class="fal fa-calendar-alt"></i> 15 July 2024</span>
+                                <div class="image">
+                                    <img src="assets/images/blog/blog-2.png" alt="Blog">
+                                </div>
+                                <ul class="blog-meta mb-16">
+                                    <li>
+                                        <i class="fal fa-user"></i>
+                                        <a href="#">Admin</a>
+                                    </li>
+                                    <li>
+                                        <i class="fal fa-comment-dots"></i> 1 Comment
+                                    </li>
+                                </ul>
+                                <p>Lorem Ipsum has been the industry's standard dummy text ever since.</p>
+                                <a href="blog-details-light.html" class="theme-btn">Read more</a>
+                            </div>
+                        </div>
+                    </div> -->
+                    <div class="col-lg-4 item text-center" style="height: 731px;">
+                        <div class="blog-item wow fadeInUp delay-0-2s black-30-bg" style="height: 731px;">
+                            <div class="content ">
+                                <h6><a href="blog-details-light.html">How to Choose the Perfect Window Blinds for Every
+                                        Room in Your Home</a></h6>
+                                <hr>
+                                <span><i class="fal fa-calendar-alt"></i> 15 July</span>
+                                <div class="image">
+                                    <img src="assets/images/Blogs/Blog_2.webp" alt="Blog">
+                                </div>
+                                <a href="blog-details-2.html" class="theme-btn">Read more</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 item text-center" style="height: 731px;">
+                        <div class="blog-item wow fadeInUp delay-0-2s black-30-bg " style="height: 731px;">
+                            <div class="content ">
+                                <h6><a href="blogs.html">Top Window Blind Trends for Modern Interiors in <br>2025</a>
+                                </h6>
+                                <hr>
+                                <span><i class="fal fa-calendar-alt"></i> 15 June</span>
+                                <div class="image">
+                                    <img src="assets/images/Blogs/Blog_1_resized.webp" alt="Blog">
+                                </div>
+                                <a href="blogs.html" class="theme-btn">Read more</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Blog Area end -->
+
+        <!-- footer area start -->
+        <div id="footer-doc">
+
+        </div>
+        <!-- footer area end -->
+
+
+        <!-- Scroll Top Button -->
+        <button class="scroll-top scroll-to-target" data-target="html"><span
+                class="fas fa-angle-double-up"></span></button>
+
+    </div>
+    <!--End pagewrapper-->
+
+
+    <!-- Jquery -->
+    <script src="assets/vendor/jquery-3.7.1.min.js"></script>
+    <!-- Popper -->
+    <script src="assets/vendor/bootstrap/js/popper.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <!-- Appear Js -->
+    <script src="assets/vendor/appear.min.js"></script>
+    <!-- Slick -->
+    <script src="assets/vendor/slick/js/slick.min.js"></script>
+    <!-- Magnific Popup -->
+    <script src="assets/vendor/magnific-popup/js/jquery.magnific-popup.min.js"></script>
+    <!-- Nice Select -->
+    <script src="assets/vendor/nice-select/js/jquery.nice-select.min.js"></script>
+    <!-- Image Loader -->
+    <script src="assets/vendor/imagesloaded.pkgd.min.js"></script>
+    <!-- Isotope -->
+    <script src="assets/vendor/isotope.pkgd.min.js"></script>
+    <!--  WOW Animation -->
+    <script src="assets/vendor/wow.min.js"></script>
+
+    <!-- Custom script -->
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/footer_normal.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+
+    <script>
+        const sliderWrapper = document.querySelector('.slider-wrapper');
+        document.querySelector('.slider-control').addEventListener('input', (e) => {
+            sliderWrapper.style.setProperty('--slider-pos', `${e.target.value}%`);
+        });
+
+    </script>
+
+
+    <script>
+        console.clear();
+
+        const links = gsap.utils.toArray(".dropdown1 a");
+        const images = gsap.utils.toArray(".dropdown1 img");
+
+        gsap.set(images, { x: 50 });
+
+        links.forEach((link, i) => {
+            const t = gsap
+                .to(images[i], {
+                    autoAlpha: 1,
+                    x: 0,
+                    duration: 0.35,
+                    ease: "power1.inOut",
+                    paused: true
+                })
+                .reverse();
+            link.addEventListener("mouseenter", () => t.reversed(!t.reversed()));
+            link.addEventListener("mouseleave", () => t.reversed(!t.reversed()));
+        });
+    </script>
+
+
+
+    <!-- reviews -->
+    <script>
+        const reviews = [
+            {
+                quote: "Viento Décor truly understands the art of luxury interiors.Their fabric collection is not only visually stunning but also of exceptional quality. The team is knowledgeable, responsive, and goes the extra mile to ensure customer satisfaction. Whether you’re decorating a home or a commercial space, Viento Décor is the perfect choice for elegant and high-end fabrics!",
+                name: "Shubam Patel",
+                designation: "Satisfied Customer",
+                src: "./assets/images/Reviews/shubam.jpg",
+            },
+            {
+                quote: "Luxury and aesthetic—that’s what Viento Décor delivers effortlessly.Their designs are not only visually stunning but also reflect a true sense of quality and detail. If you're looking to elevate your home into something truly special, Viento is the brand to explore. Their work speaks for itself refined, elegant, and deeply thoughtful.",
+                name: "Anushri",
+                designation: "Frequent Visitor",
+                src: "./assets/images/Reviews/anushri.jpg",
+            },
+            {
+                quote: "We recently sourced fabrics from Viento Décor for a project, and the experience was fantastic. The material quality exceeded expectations, and the designs were exactly what we were looking for. The team was extremely helpful in guiding us through the selection process. Highly recommend their products for premium home décor!",
+                name: "Swathi Kamisetty",
+                designation: "Satisfied Customer",
+                src: "./assets/images/Reviews/swathi.jpg",
+            },
+        ];
+
+        let currentReviewIndex = 0;
+        const imageBox = document.getElementById('review-image-box');
+        const nameBox = document.getElementById('review-name');
+        const roleBox = document.getElementById('review-role');
+        const textBox = document.getElementById('review-text');
+        const prevBtn = document.getElementById('review-prev');
+        const nextBtn = document.getElementById('review-next');
+
+        function updateReview(direction) {
+            const oldIndex = currentReviewIndex;
+            currentReviewIndex = (currentReviewIndex + direction + reviews.length) % reviews.length;
+
+            reviews.forEach((review, index) => {
+                let img = imageBox.querySelector(`[data-review="${index}"]`);
+                if (!img) {
+                    img = document.createElement('img');
+                    img.src = review.src;
+                    img.alt = review.name;
+                    img.classList.add('review-image');
+                    img.dataset.review = index;
+                    imageBox.appendChild(img);
+                }
+
+                const offset = index - currentReviewIndex;
+                const absOffset = Math.abs(offset);
+                const zIndex = reviews.length - absOffset;
+                const opacity = index === currentReviewIndex ? 1 : 0.7;
+                const scale = 1 - (absOffset * 0.15);
+                const translateY = offset === -1 ? '-20%' : offset === 1 ? '20%' : '0%';
+                const rotateY = offset === -1 ? '15deg' : offset === 1 ? '-15deg' : '0deg';
+
+                img.style.zIndex = zIndex;
+                img.style.opacity = opacity;
+                img.style.transform = `translateY(${translateY}) scale(${scale}) rotateY(${rotateY})`;
+            });
+
+            nameBox.textContent = reviews[currentReviewIndex].name;
+            roleBox.textContent = reviews[currentReviewIndex].designation;
+            textBox.innerHTML = reviews[currentReviewIndex].quote
+                .split(' ')
+                .map(word => `<span class="word">${word}</span>`)
+                .join(' ');
+
+            animateReviewWords();
+        }
+
+        function animateReviewWords() {
+            const words = textBox.querySelectorAll('.word');
+            words.forEach((word, index) => {
+                word.style.opacity = '0';
+                word.style.transform = 'translateY(10px)';
+                word.style.filter = 'blur(10px)';
+                setTimeout(() => {
+                    word.style.transition = 'opacity 0.2s ease, transform 0.2s ease, filter 0.2s ease';
+                    word.style.opacity = '1';
+                    word.style.transform = 'translateY(0)';
+                    word.style.filter = 'blur(0)';
+                }, index * 20);
+            });
+        }
+
+        function goToNextReview() {
+            updateReview(1);
+        }
+        function goToPrevReview() {
+            updateReview(-1);
+        }
+
+        prevBtn.addEventListener('click', goToPrevReview);
+        nextBtn.addEventListener('click', goToNextReview);
+
+        updateReview(0);
+
+        const reviewAutoScroll = setInterval(goToNextReview, 5000);
+        [prevBtn, nextBtn].forEach(btn => btn.addEventListener('click', () => clearInterval(reviewAutoScroll)));
+
+    </script>
+
+</body>
+
+</html>

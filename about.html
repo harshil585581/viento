@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Title -->
+    <title>Viento</title>
+    <!-- Favicon Icon -->
+    <link rel="icon" type="image/x-icon" href="./assets/images/logos/Flaticon.svg" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="assets/vendor/fontawesome-5.14.0.min.css">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
+    <!-- Magnific Popup -->
+    <link rel="stylesheet" href="assets/vendor/magnific-popup/css/magnific-popup.min.css">
+    <!-- Nice Select -->
+    <link rel="stylesheet" href="assets/vendor/nice-select/css/nice-select.min.css">
+    <!-- Animate -->
+    <link rel="stylesheet" href="assets/vendor/animate.min.css">
+    <!-- Slick -->
+    <link rel="stylesheet" href="assets/vendor/slick/css/slick.min.css">
+    <!-- Main Style -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+
+    <style>
+        .dropdown ul {
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 10px;
+            list-style: none;
+        }
+
+        .dropdown ul li {
+            position: relative;
+        }
+
+        .dropdown ul img {
+            position: absolute;
+            top: -100%;
+            left: 100%;
+            opacity: 0;
+            width: 40%;
+            visibility: hidden;
+        }
+        
+        .navbar-collapse .navigation>li>a:hover {
+            color: #e2da47 !important;
+        }
+
+        .navbar-collapse .navigation .dropdown1 a:hover {
+            color: #e2da47 !important;
+        }
+
+
+
+        .philosophy-section {
+            padding: 2rem;
+            line-height: 1.8;
+            color: #333;
+        }
+
+        .philosophy-title {
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            color: #1a1a1a;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .philosophy-text {
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            font-weight: 300;
+            letter-spacing: 0.5px;
+            line-height: 1.8;
+        }
+
+        .philosophy-text:last-child {
+            font-style: italic;
+            color: #666;
+            margin-top: 1.5rem;
+        }
+
+
+
+
+
+
+        .mt-64 {
+            margin-top: 64px;
+        }
+
+        .faq-section {
+            max-width: 700px;
+            margin: 40px auto;
+            padding: 0 20px;
+            font-family: sans-serif;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid #ccc;
+            width: 90%;
+        }
+
+        .faq-question {
+            width: 100%;
+            background: none;
+            border: none;
+            padding: 16px 0;
+            text-align: left;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-answer {
+            display: none;
+            padding: 0 0 16px 0;
+            color: #444;
+        }
+
+        .faq-question.active+.faq-answer {
+            display: block;
+        }
+
+        .arrow {
+            font-size: 22px;
+            transition: transform 0.3s ease;
+        }
+
+        .faq-question.active .arrow {
+            transform: rotate(45deg);
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="page-wrapper light-mode">
+
+        <!-- Preloader -->
+        <div class="preloader">
+            <div class="custom-loader">
+                <img src="./assets/images/logos/Flaticon.svg" alt="Loading..." />
+            </div>
+        </div>
+
+        <!-- main header -->
+        <header class="main-header">
+            <!--Header-Upper-->
+            <div class="header-upper black-120-bg">
+                <div class="container clearfix">
+                    <div class="header-inner rel d-flex align-items-center">
+                        <div class="logo-outer">
+                            <div class="logo"><a href="index.html"><img src="assets/images/logo.svg" height="100"
+                                        width="150" alt="Logo" title="Logo"></a></div>
+                        </div>
+
+                        <div class="nav-outer ms-auto clearfix">
+                            <!-- Main Menu -->
+                            <nav class="main-menu navbar-expand-lg">
+                                <div class="navbar-header py-10">
+                                    <div class="mobile-logo">
+                                        <a href="index.html">
+                                            <img src="assets/images/logo.svg" height="50" width="100" alt="Logo"
+                                                title="Logo">
+                                        </a>
+                                    </div>
+
+                                    <!-- Toggle Button -->
+                                    <button type="button" class="navbar-toggle" data-bs-toggle="collapse"
+                                        data-bs-target=".navbar-collapse">
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                    </button>
+                                </div>
+
+                                <div class="navbar-collapse collapse clearfix">
+                                    <ul class="navigation clearfix">
+                                        <li class=""><a href="index.html">Home</a>
+                                        </li>
+                                        <li class="dropdown"><a href="#">Products</a>
+                                            <ul>
+                                                <li class="dropdown1"><img src="./assets/images/Home/Woodne.png"
+                                                        alt=""><a href="product-details.html?doc=wooden-blinds">WOODEN
+                                                        BLINDS</a>
+                                                </li>
+                                                <li class="dropdown1"><img src="./assets/images/Home/Honeycomb.png"
+                                                        alt=""><a
+                                                        href="product-details.html?doc=honeycomb-blinds">HONEYCOMB
+                                                        BLINDS</a></li>
+                                                <li class="dropdown1"><img src="./assets/images/Home/Shangrilla.png"
+                                                        alt=""><a
+                                                        href="product-details.html?doc=shangrila-blinds ">SHANGRI-LA
+                                                        BLINDS</a></li>
+                                                <li class="dropdown1"><img src="./assets/images/Home/Zebra.png"
+                                                        alt=""><a href="product-details.html?doc=zebra-blinds">ZEBRA
+                                                        BLINDS</a>
+                                                </li>
+                                                <li class="dropdown1"><img src="./assets/images/Home/Screen.png"
+                                                        alt=""><a href="product-details.html?doc=screen-blinds">SCREEN
+                                                        BLINDS</a>
+                                                </li>
+                                                <li class="dropdown1"><img src="./assets/images/Home/Blackout.png"
+                                                        alt=""><a
+                                                        href="product-details.html?doc=blackout-blinds">BLACKOUT
+                                                        BLINDS</a></li>
+                                                <li class="dropdown1"><img src="./assets/images/Home/Translucent.png"
+                                                        alt=""><a
+                                                        href="product-details.html?doc=translucent-blinds">TRANSLUCENT
+                                                        BLINDS </a></li>
+                                                <li class="dropdown1"><img src="./assets/images/Home/Roman.png"
+                                                        alt=""><a
+                                                        href="product-details.html?doc=romanstyle-blinds">ROMAN STYLE
+                                                        BLINDS</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="about.html">About</a></li>
+                                        <li class=""><a href="blogs.html">blog</a>
+                                        </li>
+                                        <li><a href="contact.html">Contact</a></li>
+                                    </ul>
+                                </div>
+
+                            </nav>
+                            <!-- Main Menu End-->
+                        </div>
+                    </div>
+                    <form class="search-project search-form mt-96" id="project-search" action="#">
+                        <input type="search" required placeholder="Type to search...">
+                        <button type="submit"><i class="fa fa-search"></i></button>
+                    </form>
+                </div>
+            </div>
+            <!--End Header Upper-->
+        </header>
+
+        <!-- Banner Section Start -->
+        <!-- <section class="banner-area text pt-324 pb-250"
+            style="background-image: url(assets/images/about/page-banner-light.png);">
+            <div class="container text-center">
+                <div class="row align-items-center justify-content-between">
+                    <div class="banner-content wow fadeInUp delay-0-2s">
+                        <h1>ABOUT US</h1>
+                        <div class="mt-32">
+                            <ul class="breadcrumb wow fadeInUp delay-0-4s">
+                                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                                <li class="breadcrumb-item">About Us</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+        <!-- Banner Section End -->
+        <!-- About Style 2 Start -->
+        <section class="about-style-2 py-128">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-xl-6 col-lg-6 left">
+                        <div class="section-title wow fadeInUp delay-0-3s">
+                            <h2>VIENTO "Art of controlled Luminosity" </h2>
+                            <div class="wow fadeInUp delay-0-4s mb-45">
+                                <ul class="tab-style-one nav nav-pills nav-fill mb-32 wow fadeInUp delay-0-4s">
+                                    <li class="nav-item">
+                                        <a class="nav-link active" data-bs-toggle="tab" href="#apart-tap1">Who We
+                                            Are</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" data-bs-toggle="tab" href="#apart-tap2">Mission</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" data-bs-toggle="tab" href="#apart-tap3">Vision</a>
+                                    </li>
+                                    <!-- <li class="nav-item">
+                                        <a class="nav-link" data-bs-toggle="tab" href="#apart-tap4">The Viento Ethos</a>
+                                    </li> -->
+                                    <li class="nav-item">
+                                        <a class="nav-link" data-bs-toggle="tab" href="#apart-tap5">Brand Manifesto</a>
+                                    </li>
+                                </ul>
+                                <div class="tab-content">
+                                    <div class="tab-pane fade show active" id="apart-tap1">
+                                        <p>For over two and a half decades, Viento has sculpted the unseen poetry of
+                                            spaces.
+                                            Born in Mumbai's golden glow, our story began with a single vertical blind—a
+                                            humble stroke in
+                                            a canvas of light. In the quiet of the 1990s, we worked with only a handful
+                                            of shades, our hands
+                                            learning the language of fabric and sun. Back then, every texture was
+                                            imported, every design
+                                            borrowed. But we saw what others didn’t: the potential to redefine the very
+                                            fabric of window
+                                            coverings.</p>
+                                        <h4>The Evolution</h4>
+                                        <ul>
+                                            <li>
+                                                <strong>The Early Years:</strong> We mastered the alchemy of light
+                                                filtration first with
+                                                blinds, then through whispers of innovation. Slowly, relentlessly, we
+                                                expanded: new materials,
+                                                new geometries, new cities. Mumbai's chaos became our muse.
+                                            </li>
+                                            <li>
+                                                <strong>The Turning Point:</strong> Relationships with artisans and
+                                                vendors across India
+                                                became the bedrock of our craft. No longer content with imports, we
+                                                dreamed of our own thread,
+                                                our own patterns, our own signature.
+                                            </li>
+                                            <li>
+                                                <strong>The Revelation:</strong> In the late 2020s, Viento's first
+                                                factory rose in Sarigam,
+                                                Gujarat a sanctuary of self-reliance. Here, we began weaving our own
+                                                fabrics, cutting ties with
+                                                dependency, and writing our own design manifesto.
+                                            </li>
+                                            <li>
+                                                <strong>The Expansion:</strong> Bangalore became our southern ode in
+                                                2020, a second home
+                                                for innovation. By then, our fabrics were not just materials—they were
+                                                heirlooms, supplied
+                                                to makers across the country.
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="tab-pane fade" id="apart-tap2">
+                                        <p>At Viento, we don’t just make blinds—we reimagine the way light lives inside
+                                            your home. Light has the power to shift a mood, define a moment, and shape
+                                            the character of a space. Our mission is to give you mastery over that
+                                            power—not through bulky mechanisms or limited materials, but through
+                                            thoughtfully engineered textiles that respond to light with precision and
+                                            purpose. We believe that window treatments should do more than block or
+                                            blur—they should enhance, elevate, and enrich your experience of a room.</p>
+
+                                        <p>That’s why every Viento fabric is designed at the intersection of material
+                                            science and interior aesthetics. From blackout to sheer, each weave, thread,
+                                            and finish is carefully calibrated to interact with sunlight in specific
+                                            ways—whether it’s soft diffusion for warmth, complete darkness for rest, or
+                                            elegant transitions throughout the day. We’re not just filtering
+                                            sunlight—we’re crafting textiles that command it. Because when you master
+                                            light, you don’t just change how a room looks. You change how it feels.</p>
+
+                                        <p>At the heart of our craft is a relentless pursuit of harmony—between light
+                                            and shadow, material and mood, innovation and intimacy. We collaborate
+                                            closely with designers, architects, and dreamers to ensure that every Viento
+                                            blind is not just a product, but an integral part of a spatial experience.
+                                            Our mission is not to follow trends, but to set new standards for what
+                                            fabric, form, and function can achieve together.</p>
+                                    </div>
+                                    <div class="tab-pane fade" id="apart-tap3">
+                                        <p>We envision a future where architecture is not just designed—it’s redefined.
+                                            A future where form follows feeling, and buildings become more than
+                                            shelters; they become experiences. At Indochine, we believe great
+                                            architecture doesn’t just stand—it speaks. It listens. It adapts. And most
+                                            of all, it transforms the way we live, breathe, and see light.</p>
+
+                                        <p>In this vision, every window is more than glass. It’s a sculptor of light, a
+                                            storyteller of the sun. We design with the belief that light is not a
+                                            passive element to be managed, but an active force to be shaped—bent,
+                                            softened, sharpened—until it aligns perfectly with the soul of the space. To
+                                            redefine architecture is to embrace this mastery—where materials serve
+                                            emotion, and every opening bends light to its will.</p>
+
+                                        <p>We dream of spaces where light becomes choreography—shifting, flowing,
+                                            pausing—at the touch of a hand or the turn of the sun. In this future,
+                                            architecture responds like nature does: fluid, alive, and in rhythm with its
+                                            inhabitants. Our vision is to lead that movement, blending textile
+                                            engineering with architectural sensitivity to create structures that don’t
+                                            just occupy space—they elevate it.</p>
+
+                                        <p>We see a world where architecture no longer fights the environment—it
+                                            partners with it. Where light is not merely managed, but invited, sculpted,
+                                            and celebrated. At Indochine, our vision is rooted in this
+                                            symbiosis—crafting spaces that breathe with the day, shift with the seasons,
+                                            and glow with purpose. It's not just about creating buildings, but crafting
+                                            atmospheres that feel intuitively alive—where light dances, silence speaks,
+                                            and design becomes destiny.</p>
+                                    </div>
+                                    <div class="tab-pane fade" id="apart-tap5">
+                                        <div class="philosophy-section">
+                                            <h3 class="philosophy-title">"The Viento Philosophy"</h3>
+
+                                            <p class="philosophy-text">
+                                                Viento is not merely seen—it is felt. Like the wind that leaves no trace
+                                                yet moves mountains, our work exists in the delicate space between
+                                                presence and absence. It is in the hush between sunlight and shadow, in
+                                                the quiet confidence of forms that speak without needing to be loud.
+                                            </p>
+
+                                            <p class="philosophy-text">
+                                                We are alchemists of the intangible—shaping air, light, and feeling into
+                                                something visible, touchable, unforgettable. Every stroke, every curve,
+                                                every fabric is chosen not for its opulence alone, but for its ability
+                                                to stir emotion. We believe luxury lies not in excess, but in
+                                                restraint—in details that whisper instead of shout.
+                                            </p>
+
+                                            <p class="philosophy-text">
+                                                This is the elegance of stillness. The softness that commands presence.
+                                                The beauty that lingers long after you've left the room. This is
+                                                Viento—where design meets poetry, and where quiet magnificence becomes a
+                                                way of life.
+                                            </p>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="button">
+                                <a class="btn-white-bg" href="contact.html">Contact Us</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-6">
+                        <div class="imgs">
+                            <img src="assets/images/about/about-right.jpg" alt="about image">
+                            <img class="hovershow" src="assets/images/about/hover.png" alt="about image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- About Style 2 End -->
+        <!-- Service Section Start -->
+        <!-- <section class="service-area-2 black-90-bg py-128 justify-content-center">
+            <div class="container">
+                <div class="row mb-96">
+                    <div class="col-xs-4 col-lg-4 service-item">
+                        <div class="icon"><i class="fa fa-house"></i></div>
+                        <a href="project-details-light.html">
+                            <h5>ARCHITECTURE</h5>
+                        </a>
+                        <p>Our design team can make changes to any plan, big or small, to make it perfect for your
+                            needs.</p>
+                        <a href="project-details-light.html"><span class="right-arrow"><i
+                                    class="fa fa-long-arrow-right"></i></span></a>
+                    </div>
+                    <div class="col-xs-4 col-lg-4 service-item">
+                        <div class="icon"><i class="fa fa-chair"></i></div>
+                        <a href="project-details-light.html">
+                            <h5>INTERIOR</h5>
+                        </a>
+                        <p>Our design team can make changes to any plan, big or small, to make it perfect for your
+                            needs.</p>
+                        <a href="project-details-light.html"><span class="right-arrow"><i
+                                    class="fa fa-long-arrow-right"></i></span></a>
+                    </div>
+                    <div class="col-xs-4 col-lg-4 service-item">
+                        <div class="icon"><i class="fa fa-snowflake"></i></div>
+                        <a href="project-details-light.html">
+                            <h5>DECORATION</h5>
+                        </a>
+                        <p>Our design team can make changes to any plan, big or small, to make it perfect for your
+                            needs.</p>
+                        <a href="project-details-light.html"><span class="right-arrow"><i
+                                    class="fa fa-long-arrow-right"></i></span></a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-4 col-lg-4 service-item">
+                        <div class="icon"><i class="fa fa-hammer"></i></div>
+                        <a href="project-details-light.html">
+                            <h5>Building</h5>
+                        </a>
+                        <p>Our design team can make changes to any plan, big or small, to make it perfect for your
+                            needs.</p>
+                        <a href="project-details-light.html"><span class="right-arrow"><i
+                                    class="fa fa-long-arrow-right"></i></span></a>
+                    </div>
+                    <div class="col-xs-4 col-lg-4 service-item">
+                        <div class="icon"><i class="fa fa-dharmachakra"></i></div>
+                        <a href="project-details-light.html">
+                            <h5>INTERIOR</h5>
+                        </a>
+                        <p>Our design team can make changes to any plan, big or small, to make it perfect for your
+                            needs.</p>
+                        <a href="project-details-light.html"><span class="right-arrow"><i
+                                    class="fa fa-long-arrow-right"></i></span></a>
+                    </div>
+                    <div class="col-xs-4 col-lg-4 service-item">
+                        <div class="icon"><i class="fa fa-dollar-sign"></i></div>
+                        <a href="project-details-light.html">
+                            <h5>Calculator</h5>
+                        </a>
+                        <p>Our design team can make changes to any plan, big or small, to make it perfect for your
+                            needs.</p>
+                        <a href="project-details-light.html"><span class="right-arrow"><i
+                                    class="fa fa-long-arrow-right"></i></span></a>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+        <!-- Services Section End -->
+
+        <!-- Achievements Area start -->
+        <section class="achievement-area text-white"
+            style="background-image: url(assets/images/background/counter.png);">
+            <div class="container">
+                <div class="row">
+                    <div class="counter-wrap">
+                        <div class="row">
+                            <div class="mobile-mb col-xs-3 col-lg-3">
+                                <div class="counter-text-wrap wow fadeInUp delay-0-2s">
+                                    <div class="d-flex">
+                                        <h2 class="count-text mb-32" data-speed="3000" data-stop="200">0</h2><span
+                                            class="h2">+</span>
+                                    </div>
+                                    <h5 class="counter-title">Happy Clients</h5>
+                                </div>
+                            </div>
+                            <div class="mobile-mb col-xs-3 col-lg-3">
+                                <div class="counter-text-wrap wow fadeInUp delay-0-4s">
+                                    <div class="d-flex">
+                                        <h2 class="count-text mb-32" data-speed="3000" data-stop="15">0</h2>
+                                    </div>
+                                    <h5 class="counter-title">Years Experience</h5>
+                                </div>
+                            </div>
+                            <div class="mobile-mb col-xs-3 col-lg-3">
+                                <div class="counter-text-wrap wow fadeInUp delay-0-2s">
+                                    <div class="d-flex">
+                                        <h2 class="count-text mb-32" data-speed="3000" data-stop="30">0</h2><span
+                                            class="h2">+</span>
+                                    </div>
+                                    <h5 class="counter-title">Best Partners</h5>
+                                </div>
+                            </div>
+                            <div class="mobile-mb col-xs-3 col-lg-3">
+                                <div class="counter-text-wrap wow fadeInUp delay-0-4s">
+                                    <div class="d-flex">
+                                        <h2 class="count-text mb-32" data-speed="3000" data-stop="500">0</h2>
+                                    </div>
+                                    <h5 class="counter-title">Projects Done</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Achievements Area end -->
+
+        <!-- Team Area start -->
+        <!-- <section class="team-area py-128">
+            <div class="container">
+                <div class="d-flex section-heading mb-96">
+                    <div class="section-title">
+                        <h2 class="wow fadeInUp delay-0-2s">OUR TEAM</h2>
+                    </div>
+                    <div class="carousel-buttons">
+                        <button class="prev" type="button" data-bs-target="#teamCarousel" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"><i
+                                    class="fa fa-long-arrow-left"></i></span>
+                        </button>
+                        <button class="" type="button" data-bs-target="#teamCarousel" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"><i
+                                    class="fa fa-long-arrow-right"></i></span>
+                        </button>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div id="teamCarousel" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner" role="listbox">
+                            <div class="row carousel-item active">
+                                <div class="col-md-4 team-item-wrap">
+                                    <div class="team-item text-center">
+                                        <div class="team-img">
+                                            <img src="assets/images/team/1.png" alt="team image">
+                                        </div>
+                                        <div class="text">
+                                            <div>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                            </div>
+                                            <h5>Chris Evan</h5>
+                                            <p>Architecture Design</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row carousel-item">
+                                <div class="col-md-4 team-item-wrap">
+                                    <div class="team-item text-center">
+                                        <div class="team-img">
+                                            <img src="assets/images/team/2.png" alt="team image">
+                                        </div>
+                                        <div class="text">
+                                            <div>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                            </div>
+                                            <h5>Chris Jobling</h5>
+                                            <p>Interior Design</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row carousel-item">
+                                <div class="col-md-4 team-item-wrap">
+                                    <div class="team-item text-center">
+                                        <div class="team-img">
+                                            <img src="assets/images/team/3.png" alt="team image">
+                                        </div>
+                                        <div class="text">
+                                            <div>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                            </div>
+                                            <h5>Lara Smith</h5>
+                                            <p>Interior Design</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row carousel-item">
+                                <div class="col-md-4 team-item-wrap">
+                                    <div class="team-item text-center">
+                                        <div class="team-img">
+                                            <img src="assets/images/team/4.png" alt="team image">
+                                        </div>
+                                        <div class="text">
+                                            <div>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                            </div>
+                                            <h5>Chris Norlan</h5>
+                                            <p>Interior Design</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+        <!-- Team Area end -->
+        <!-- Timeline Area start -->
+
+
+        <!-- faq -->
+
+        <section class="about-style-2 py-128">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-xl-6 col-lg-6 left">
+                        <h2 class="faq-heading text-left mb-45">Frequently Asked Questions</h2>
+
+                        <div class="row mt-64 wow fadeInLeft delay-0-1s mt-16">
+                            <div class=" text-left">
+                                <div class="faq-item">
+                                    <button class="faq-question">
+                                        <h6>What types of blinds does Viento offer?</h6>
+                                        <span class="arrow">+</span>
+                                    </button>
+                                    <div class="faq-answer">
+                                        <p>Viento offers a wide range including blackout blinds, screen
+                                            blinds, translucent fabrics, zebra blinds, and Roman-style options—each
+                                            tailored
+                                            for different levels of light control and privacy.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row wow fadeInLeft delay-0-1s mt-16">
+                            <div class=" text-left">
+                                <div class="faq-item">
+                                    <button class="faq-question">
+                                        <h6>How do I clean and maintain Viento blinds?</h6>
+                                        <span class="arrow">+</span>
+                                    </button>
+                                    <div class="faq-answer">
+                                        <p>Most Viento blinds can be cleaned with a soft cloth or vacuum
+                                            brush. For deeper cleaning, a mild soap solution works well. No harsh
+                                            chemicals
+                                            needed.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row wow fadeInLeft delay-0-1s mt-16">
+                            <div class=" text-left">
+                                <div class="faq-item">
+                                    <button class="faq-question">
+                                        <h6>Do your blinds block heat and UV rays?</h6>
+                                        <span class="arrow">+</span>
+                                    </button>
+                                    <div class="faq-answer">
+                                        <p>Absolutely. Our screen and blackout fabrics are designed to reduce
+                                            glare, minimize heat gain, and block harmful UV rays—keeping your interiors
+                                            cooler and protected..</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row wow fadeInLeft delay-0-1s mt-16">
+                            <div class=" text-left">
+                                <div class="faq-item">
+                                    <button class="faq-question">
+                                        <h6>Are Viento blinds suitable for large windows?</h6>
+                                        <span class="arrow">+</span>
+                                    </button>
+                                    <div class="faq-answer">
+                                        <p>Yes, our blinds are custom-made to fit any window size, including
+                                            full-height or wide-span windows commonly found in modern homes and offices.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row wow fadeInLeft delay-0-1s mt-16">
+                            <div class=" text-left">
+                                <div class="faq-item">
+                                    <button class="faq-question">
+                                        <h6>Can I automate Viento blinds?</h6>
+                                        <span class="arrow">+</span>
+                                    </button>
+                                    <div class="faq-answer">
+                                        <p>Yes. Our blinds are compatible with motorized systems and home
+                                            automation setups, allowing you to control them via remote, app, or voice
+                                            assistant.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-6">
+                        <div class="imgs">
+                            <img src="assets/images/Home/Honeycomb.png" alt="about image">
+                            <!-- <img class="hovershow" src="assets/images/about/hover.png" alt="about image"> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+
+        <!-- footer area start -->
+        <div id="footer-doc">
+
+        </div>
+        <!-- footer area end -->
+
+
+        <!-- Scroll Top Button -->
+        <button class="scroll-top scroll-to-target" data-target="html"><span
+                class="fas fa-angle-double-up"></span></button>
+
+    </div>
+    <!--End pagewrapper-->
+
+
+    <!-- Jquery -->
+    <script src="assets/vendor/jquery-3.7.1.min.js"></script>
+    <!-- Popper -->
+    <script src="assets/vendor/bootstrap/js/popper.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <!-- Appear Js -->
+    <script src="assets/vendor/appear.min.js"></script>
+    <!-- Slick -->
+    <script src="assets/vendor/slick/js/slick.min.js"></script>
+    <!-- Magnific Popup -->
+    <script src="assets/vendor/magnific-popup/js/jquery.magnific-popup.min.js"></script>
+    <!-- Nice Select -->
+    <script src="assets/vendor/nice-select/js/jquery.nice-select.min.js"></script>
+    <!-- Image Loader -->
+    <script src="assets/vendor/imagesloaded.pkgd.min.js"></script>
+    <!-- Isotope -->
+    <script src="assets/vendor/isotope.pkgd.min.js"></script>
+    <!--  WOW Animation -->
+    <script src="assets/vendor/wow.min.js"></script>
+
+    <!-- Custom script -->
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/footer_normal.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+    <script>
+        console.clear();
+
+        const links = gsap.utils.toArray(".dropdown1 a");
+        const images = gsap.utils.toArray(".dropdown1 img");
+
+        gsap.set(images, { x: 50 });
+
+        links.forEach((link, i) => {
+            const t = gsap
+                .to(images[i], {
+                    autoAlpha: 1,
+                    x: 0,
+                    duration: 0.35,
+                    ease: "power1.inOut",
+                    paused: true
+                })
+                .reverse();
+            link.addEventListener("mouseenter", () => t.reversed(!t.reversed()));
+            link.addEventListener("mouseleave", () => t.reversed(!t.reversed()));
+        });
+    </script>
+
+
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const questions = document.querySelectorAll(".faq-question");
+
+            questions.forEach(question => {
+                question.addEventListener("click", function () {
+                    // If you want only one open at a time:
+                    questions.forEach(q => {
+                        if (q !== this) {
+                            q.classList.remove("active");
+                        }
+                    });
+
+                    // Toggle current one
+                    this.classList.toggle("active");
+                });
+            });
+        });
+    </script>
+
+
+
+</body>
+
+</html>

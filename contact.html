@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Title -->
+    <title>Viento</title>
+    <!-- Favicon Icon -->
+    <link rel="icon" type="image/x-icon" href="./assets/images/logos/Flaticon.svg" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="assets/vendor/fontawesome-5.14.0.min.css">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
+    <!-- Magnific Popup -->
+    <link rel="stylesheet" href="assets/vendor/magnific-popup/css/magnific-popup.min.css">
+    <!-- Nice Select -->
+    <link rel="stylesheet" href="assets/vendor/nice-select/css/nice-select.min.css">
+    <!-- Animate -->
+    <link rel="stylesheet" href="assets/vendor/animate.min.css">
+    <!-- Slick -->
+    <link rel="stylesheet" href="assets/vendor/slick/css/slick.min.css">
+    <!-- Main Style -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+
+    <style>
+        .mt-64 {
+            margin-top: 64px;
+        }
+
+        .faq-section {
+            max-width: 700px;
+            margin: 40px auto;
+            padding: 0 20px;
+            font-family: sans-serif;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid #ccc;
+            width: 90%;
+        }
+
+        .faq-question {
+            width: 100%;
+            background: none;
+            border: none;
+            padding: 16px 0;
+            text-align: left;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-answer {
+            display: none;
+            padding: 0 0 16px 0;
+            color: #444;
+        }
+
+        .faq-question.active+.faq-answer {
+            display: block;
+        }
+
+        .arrow {
+            font-size: 22px;
+            transition: transform 0.3s ease;
+        }
+
+        .faq-question.active .arrow {
+            transform: rotate(45deg);
+        }
+
+
+
+
+        .dropdown ul {
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 10px;
+            list-style: none;
+        }
+
+        .dropdown ul li {
+            position: relative;
+        }
+
+        .dropdown ul img {
+            position: absolute;
+            top: -100%;
+            left: 100%;
+            opacity: 0;
+            width: 40%;
+            visibility: hidden;
+        }
+
+        .navbar-collapse .navigation>li>a:hover {
+            color: #e2da47 !important;
+        }
+
+        .navbar-collapse .navigation .dropdown1 a:hover {
+            color: #e2da47 !important;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="page-wrapper">
+
+        <!-- Preloader -->
+        <div class="preloader">
+            <div class="custom-loader">
+                <img src="./assets/images/logos/Flaticon.svg" alt="Loading..." />
+            </div>
+        </div>
+
+
+        <!-- main header -->
+        <header class="main-header">
+            <!--Header-Upper-->
+            <div class="header-upper black-120-bg">
+                <div class="container clearfix">
+                    <div class="header-inner rel d-flex align-items-center">
+                        <div class="logo-outer">
+                            <div class="logo"><a href="index.html"><img src="assets/images/logo.svg" height="100"
+                                        width="150" alt="Logo" title="Logo"></a></div>
+                        </div>
+
+                        <div class="nav-outer ms-auto clearfix">
+                            <!-- Main Menu -->
+                            <nav class="main-menu navbar-expand-lg">
+                                <div class="navbar-header py-10">
+                                    <div class="mobile-logo">
+                                        <a href="index.html">
+                                            <img src="assets/images/logo.svg" height="50" width="100" alt="Logo"
+                                                title="Logo">
+                                        </a>
+                                    </div>
+
+                                    <!-- Toggle Button -->
+                                    <button type="button" class="navbar-toggle" data-bs-toggle="collapse"
+                                        data-bs-target=".navbar-collapse">
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                    </button>
+                                </div>
+
+                                <div class="navbar-collapse collapse clearfix">
+                                    <ul class="navigation clearfix">
+                                        <li class=""><a href="index.html">Home</a>
+                                        </li>
+                                        <li class="dropdown"><a href="#">Products</a>
+                                            <ul>
+                                                <li class="dropdown1"><img src="./assets/images/Home/Woodne.png"
+                                                        alt=""><a href="product-details.html?doc=wooden-blinds">WOODEN
+                                                        BLINDS</a>
+                                                </li>
+                                                <li class="dropdown1"><img src="./assets/images/Home/Honeycomb.png"
+                                                        alt=""><a
+                                                        href="product-details.html?doc=honeycomb-blinds">HONEYCOMB
+                                                        BLINDS</a></li>
+                                                <li class="dropdown1"><img src="./assets/images/Home/Shangrilla.png"
+                                                        alt=""><a
+                                                        href="product-details.html?doc=shangrila-blinds ">SHANGRI-LA
+                                                        BLINDS</a></li>
+                                                <li class="dropdown1"><img src="./assets/images/Home/Zebra.png"
+                                                        alt=""><a href="product-details.html?doc=zebra-blinds">ZEBRA
+                                                        BLINDS</a>
+                                                </li>
+                                                <li class="dropdown1"><img src="./assets/images/Home/Screen.png"
+                                                        alt=""><a href="product-details.html?doc=screen-blinds">SCREEN
+                                                        BLINDS</a>
+                                                </li>
+                                                <li class="dropdown1"><img src="./assets/images/Home/Blackout.png"
+                                                        alt=""><a
+                                                        href="product-details.html?doc=blackout-blinds">BLACKOUT
+                                                        BLINDS</a></li>
+                                                <li class="dropdown1"><img src="./assets/images/Home/Translucent.png"
+                                                        alt=""><a
+                                                        href="product-details.html?doc=translucent-blinds">TRANSLUCENT
+                                                        BLINDS </a></li>
+                                                <li class="dropdown1"><img src="./assets/images/Home/Roman.png"
+                                                        alt=""><a
+                                                        href="product-details.html?doc=romanstyle-blinds">ROMAN STYLE
+                                                        BLINDS</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="about.html">About</a></li>
+                                        <li class=""><a href="blogs.html">blog</a>
+                                        </li>
+                                        <li><a href="contact.html">Contact</a></li>
+                                    </ul>
+                                </div>
+
+                            </nav>
+                            <!-- Main Menu End-->
+                        </div>
+                    </div>
+                    <form class="search-project search-form mt-96" id="project-search" action="#">
+                        <input type="search" required placeholder="Type to search...">
+                        <button type="submit"><i class="fa fa-search"></i></button>
+                    </form>
+                </div>
+            </div>
+            <!--End Header Upper-->
+        </header>
+
+        <!-- Banner Section Start -->
+        <section class="contact-banner banner-area">
+            <div class="container-fluid">
+                <div
+                    class="contact-title row align-items-center text-center justify-content-between wow fadeInUp delay-0-2s py-128">
+                    <h1>CONTACT</h1>
+                </div>
+            </div>
+        </section>
+        <!-- Banner Section End -->
+
+        <!-- Contact Form Area start -->
+        <section class="contact-area">
+            <div class="container">
+                <div class="row justify-content-between contact-content">
+                    <div class="col-lg-9 ct-form wow fadeInRight delay-0-2s">
+                        <form id="contactForm" class="contact-form rmt-55 contactForm" action="#" name="contactForm"
+                            method="post">
+                            <div class="form-group">
+                                <input type="text" id="name" name="name" class="form-control" value=""
+                                    placeholder="Name" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" id="email" name="email" class="form-control" value=""
+                                    placeholder="Email" required>
+                            </div>
+                            <div class="form-group">
+                                <textarea name="message" id="message" class="form-control" rows="9"
+                                    placeholder="Message" required></textarea>
+                            </div>
+                            <div class="form-group mb-0">
+                                <button type="submit" class="contact-btn">Send a message</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="contact-info wow fadeInLeft delay-0-2s">
+                        <div class="section-title mb-32">
+                            <h5 class="mb-32">Contact Us</h5>
+                            <p>Get in touch to learn more about our premium blinds—whether you're looking for style,
+                                function, or bespoke options. We’d love to help you find the perfect solution.</p>
+                        </div>
+                        <div class="contact-info-item">
+                            <i class="fas fa-phone-volume"></i> <a href="callto:+919481491477">+91 9481491477</a>
+                        </div>
+                        <div class="contact-info-item">
+                            <i class="fas fa-envelope"></i> <span class="text"><a
+                                    href="mailto:vientodecor@gmail.com">vientodecor@gmail.com</a></span>
+                        </div>
+                        <div class="contact-info-item">
+                            <i class="fas fa-map-marker-alt"></i> <span class="text">CONTACT
+                                No. 70/4, 1ST FLOOR, 2ND MAIN, 3rd CROSS, Bannerghatta Rd, NS Palya, Bengaluru,
+                                Karnataka 560076</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Contact Form Area end -->
+
+        <section class="map-area">
+            <div class="container-fluid">
+                <!-- Location Map Area Start -->
+                <div class="contact-page-map wow fadeInUp delay-0-2s">
+                    <div class="our-location">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3888.953254650306!2d77.601088!3d12.910726!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae153a6ce82091%3A0x51a97e8b6375db64!2sViento%20Decor!5e0!3m2!1sen!2sin!4v1753442519459!5m2!1sen!2sin"
+                            style="border:0; width: 100%;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+                <!-- Location Map Area End -->
+            </div>
+        </section>
+
+        <!-- footer area start -->
+        <div id="footer-doc">
+
+        </div>
+        <!-- footer area end -->
+
+
+        <!-- Scroll Top Button -->
+        <button class="scroll-top scroll-to-target" data-target="html"><span
+                class="fas fa-angle-double-up"></span></button>
+
+    </div>
+    <!--End pagewrapper-->
+
+
+    <!-- Jquery -->
+    <script src="assets/vendor/jquery-3.7.1.min.js"></script>
+    <!-- Popper -->
+    <script src="assets/vendor/bootstrap/js/popper.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <!-- Appear Js -->
+    <script src="assets/vendor/appear.min.js"></script>
+    <!-- Slick -->
+    <script src="assets/vendor/slick/js/slick.min.js"></script>
+    <!-- Magnific Popup -->
+    <script src="assets/vendor/magnific-popup/js/jquery.magnific-popup.min.js"></script>
+    <!-- Nice Select -->
+    <script src="assets/vendor/nice-select/js/jquery.nice-select.min.js"></script>
+    <!-- Image Loader -->
+    <script src="assets/vendor/imagesloaded.pkgd.min.js"></script>
+    <!-- Isotope -->
+    <script src="assets/vendor/isotope.pkgd.min.js"></script>
+    <!--  WOW Animation -->
+    <script src="assets/vendor/wow.min.js"></script>
+
+    <!-- Custom script -->
+    <script src="assets/js/script.js"></script>
+
+    <script src="assets/js/footer_normal.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+
+    <script>
+        console.clear();
+
+        const links = gsap.utils.toArray(".dropdown1 a");
+        const images = gsap.utils.toArray(".dropdown1 img");
+
+        gsap.set(images, { x: 50 });
+
+        links.forEach((link, i) => {
+            const t = gsap
+                .to(images[i], {
+                    autoAlpha: 1,
+                    x: 0,
+                    duration: 0.35,
+                    ease: "power1.inOut",
+                    paused: true
+                })
+                .reverse();
+            link.addEventListener("mouseenter", () => t.reversed(!t.reversed()));
+            link.addEventListener("mouseleave", () => t.reversed(!t.reversed()));
+        });
+    </script>
+
+</body>
+
+</html>

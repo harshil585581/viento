@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Title -->
+    <title>Viento</title>
+    <!-- Favicon Icon -->
+    <link rel="icon" type="image/x-icon" href="./assets/images/logos/Flaticon.svg" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="assets/vendor/fontawesome-5.14.0.min.css">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
+    <!-- Magnific Popup -->
+    <link rel="stylesheet" href="assets/vendor/magnific-popup/css/magnific-popup.min.css">
+    <!-- Nice Select -->
+    <link rel="stylesheet" href="assets/vendor/nice-select/css/nice-select.min.css">
+    <!-- Animate -->
+    <link rel="stylesheet" href="assets/vendor/animate.min.css">
+    <!-- Slick -->
+    <link rel="stylesheet" href="assets/vendor/slick/css/slick.min.css">
+    <!-- Main Style -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+
+    <style>
+        .mt-64 {
+            margin-top: 64px;
+        }
+
+        .faq-section {
+            max-width: 700px;
+            margin: 40px auto;
+            padding: 0 20px;
+            font-family: sans-serif;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid #ccc;
+            width: 90%;
+        }
+
+        .faq-question {
+            width: 100%;
+            background: none;
+            border: none;
+            padding: 16px 0;
+            text-align: left;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-answer {
+            display: none;
+            padding: 0 0 16px 0;
+            color: #444;
+        }
+
+        .faq-question.active+.faq-answer {
+            display: block;
+        }
+
+        .arrow {
+            font-size: 22px;
+            transition: transform 0.3s ease;
+        }
+
+        .faq-question.active .arrow {
+            transform: rotate(45deg);
+        }
+
+
+
+        /* menu */
+        .dropdown ul {
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 10px;
+            list-style: none;
+        }
+
+        .dropdown ul li {
+            position: relative;
+        }
+
+        .dropdown ul img {
+            position: absolute;
+            top: -100%;
+            left: 100%;
+            opacity: 0;
+            width: 40%;
+            visibility: hidden;
+        }
+
+        .navbar-collapse .navigation>li>a:hover {
+            color: #e2da47 !important;
+        }
+
+        .navbar-collapse .navigation .dropdown1 a:hover {
+            color: #e2da47 !important;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="page-wrapper light-mode">
+
+        <!-- Preloader -->
+        <div class="preloader">
+            <div class="custom-loader">
+                <img src="./assets/images/logos/Flaticon.svg" alt="Loading..." />
+            </div>
+        </div>
+
+        <!-- main header -->
+        <header class="main-header">
+            <!--Header-Upper-->
+            <div class="header-upper black-120-bg">
+                <div class="container clearfix">
+                    <div class="header-inner rel d-flex align-items-center">
+                        <div class="logo-outer">
+                            <div class="logo"><a href="index.html"><img src="assets/images/logo.svg" height="100"
+                                        width="150" alt="Logo" title="Logo"></a></div>
+                        </div>
+
+                        <div class="nav-outer ms-auto clearfix">
+                            <!-- Main Menu -->
+                            <nav class="main-menu navbar-expand-lg">
+                                <div class="navbar-header py-10">
+                                    <div class="mobile-logo">
+                                        <a href="index.html">
+                                            <img src="assets/images/logo.svg" height="50" width="100" alt="Logo"
+                                                title="Logo">
+                                        </a>
+                                    </div>
+
+                                    <!-- Toggle Button -->
+                                    <button type="button" class="navbar-toggle" data-bs-toggle="collapse"
+                                        data-bs-target=".navbar-collapse">
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                    </button>
+                                </div>
+
+                                <div class="navbar-collapse collapse clearfix">
+                                    <ul class="navigation clearfix">
+                                        <li class=""><a href="index.html">Home</a>
+                                        </li>
+                                        <li class="dropdown"><a href="#">Products</a>
+                                            <ul>
+                                                <li class="dropdown1"><img src="./assets/images/Home/Woodne.png"
+                                                        alt=""><a href="product-details.html?doc=wooden-blinds">WOODEN
+                                                        BLINDS</a>
+                                                </li>
+                                                <li class="dropdown1"><img src="./assets/images/Home/Honeycomb.png"
+                                                        alt=""><a
+                                                        href="product-details.html?doc=honeycomb-blinds">HONEYCOMB
+                                                        BLINDS</a></li>
+                                                <li class="dropdown1"><img src="./assets/images/Home/Shangrilla.png"
+                                                        alt=""><a
+                                                        href="product-details.html?doc=shangrila-blinds ">SHANGRI-LA
+                                                        BLINDS</a></li>
+                                                <li class="dropdown1"><img src="./assets/images/Home/Zebra.png"
+                                                        alt=""><a href="product-details.html?doc=zebra-blinds">ZEBRA
+                                                        BLINDS</a>
+                                                </li>
+                                                <li class="dropdown1"><img src="./assets/images/Home/Screen.png"
+                                                        alt=""><a href="product-details.html?doc=screen-blinds">SCREEN
+                                                        BLINDS</a>
+                                                </li>
+                                                <li class="dropdown1"><img src="./assets/images/Home/Blackout.png"
+                                                        alt=""><a
+                                                        href="product-details.html?doc=blackout-blinds">BLACKOUT
+                                                        BLINDS</a></li>
+                                                <li class="dropdown1"><img src="./assets/images/Home/Translucent.png"
+                                                        alt=""><a
+                                                        href="product-details.html?doc=translucent-blinds">TRANSLUCENT
+                                                        BLINDS </a></li>
+                                                <li class="dropdown1"><img src="./assets/images/Home/Roman.png"
+                                                        alt=""><a
+                                                        href="product-details.html?doc=romanstyle-blinds">ROMAN STYLE
+                                                        BLINDS</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="about.html">About</a></li>
+                                        <li class=""><a href="blogs.html">blog</a>
+                                        </li>
+                                        <li><a href="contact.html">Contact</a></li>
+                                    </ul>
+                                </div>
+
+                            </nav>
+                            <!-- Main Menu End-->
+                        </div>
+                    </div>
+                    <form class="search-project search-form mt-96" id="project-search" action="#">
+                        <input type="search" required placeholder="Type to search...">
+                        <button type="submit"><i class="fa fa-search"></i></button>
+                    </form>
+                </div>
+            </div>
+            <!--End Header Upper-->
+        </header>
+
+
+        <!-- Banner Section Start -->
+        <div id="doc-container">
+
+        </div>
+        <!-- Related Projects Area end -->
+
+
+        <!-- footer area start -->
+        <div id="footer-doc">
+
+        </div>
+        <!-- footer area end -->
+
+
+        <!-- Scroll Top Button -->
+        <button class="scroll-top scroll-to-target" data-target="html"><span
+                class="fas fa-angle-double-up"></span></button>
+
+    </div>
+    <!--End pagewrapper-->
+
+
+
+    <!-- Jquery -->
+    <script src="assets/vendor/jquery-3.7.1.min.js"></script>
+    <!-- Popper -->
+    <script src="assets/vendor/bootstrap/js/popper.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <!-- Appear Js -->
+    <script src="assets/vendor/appear.min.js"></script>
+    <!-- Slick -->
+    <script src="assets/vendor/slick/js/slick.min.js"></script>
+    <!-- Magnific Popup -->
+    <script src="assets/vendor/magnific-popup/js/jquery.magnific-popup.min.js"></script>
+    <!-- Nice Select -->
+    <script src="assets/vendor/nice-select/js/jquery.nice-select.min.js"></script>
+    <!-- Image Loader -->
+    <script src="assets/vendor/imagesloaded.pkgd.min.js"></script>
+    <!-- Isotope -->
+    <script src="assets/vendor/isotope.pkgd.min.js"></script>
+    <!--  WOW Animation -->
+    <script src="assets/vendor/wow.min.js"></script>
+
+    <!-- Custom script -->
+    <script src="assets/js/script.js"></script>
+
+    <script src="assets/js/footer_inner.js"></script>
+
+    <script>
+        function setupDropdownButtons() {
+            const faqButtons = document.querySelectorAll('.faq-question');
+
+            faqButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const answer = button.parentElement.querySelector('.faq-answer');
+                    const isActive = button.classList.toggle('active');
+
+
+                });
+            });
+        }
+    </script>
+
+    <script src="assets/js/data.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+
+
+    <script>
+        console.clear();
+
+        const links = gsap.utils.toArray(".dropdown1 a");
+        const images = gsap.utils.toArray(".dropdown1 img");
+
+        gsap.set(images, { x: 50 });
+
+        links.forEach((link, i) => {
+            const t = gsap
+                .to(images[i], {
+                    autoAlpha: 1,
+                    x: 0,
+                    duration: 0.35,
+                    ease: "power1.inOut",
+                    paused: true
+                })
+                .reverse();
+            link.addEventListener("mouseenter", () => t.reversed(!t.reversed()));
+            link.addEventListener("mouseleave", () => t.reversed(!t.reversed()));
+        });
+    </script>
+
+
+</body>
+
+</html>
