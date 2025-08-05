@@ -24,7 +24,8 @@
       "img3":"./assets/images/Products/wooden/wooden3.jpg",
       "img4":"./assets/images/Products/wooden/wooden4.png",
       "img5":"assets/images/Home/Roman.png",
-      "img6":"assets/images/Home/Honeycomb.png"
+      "img6":"assets/images/Home/Honeycomb.png",
+      "bg":"./assets/images/Products/bg/Wooden_bg.png"
     },
 
     {
@@ -52,7 +53,8 @@
       "img3":"./assets/images/Products/honey/honey2.webp",
       "img4":"./assets/images/Products/honey/honey3.jpg",
       "img5":"assets/images/Home/Woodne.png",
-      "img6":"assets/images/Home/Shangrilla.png"
+      "img6":"assets/images/Home/Shangrilla.png",
+      "bg":"./assets/images/Products/bg/Honeycomb_bg.png"
     },
 
     {
@@ -82,7 +84,8 @@
       "img3":"./assets/images/Products/shangrilla/shan2.jpg",
       "img4":"./assets/images/Products/honey/shan3.jpg",
       "img5":"assets/images/Home/Honeycomb.png",
-      "img6":"assets/images/Home/Zebra.png"
+      "img6":"assets/images/Home/Zebra.png",
+      "bg":"./assets/images/Products/bg/shangrila-blinds_bg.png"
     },
 
     {
@@ -110,7 +113,8 @@
       "img3":"./assets/images/Products/zebra/zebra2.webp",
       "img4":"./assets/images/Products/zebra/zebra3.webp",
       "img5":"assets/images/Home/Shangrilla.png",
-      "img6":"assets/images/Home/Screen.png"
+      "img6":"assets/images/Home/Screen.png",
+      "bg":"./assets/images/Products/bg/Zebra_bg.png"
     },
 
     {
@@ -137,7 +141,8 @@
       "img3":"./assets/images/Products/screen/screen2.webp",
       "img4":"./assets/images/Products/screen/screen3.jpg",
       "img5":"assets/images/Home/Zebra.png",
-      "img6":"assets/images/Home/Blackout.png"
+      "img6":"assets/images/Home/Blackout.png",
+      "bg":"./assets/images/Products/bg/Screen_bg.png"
     },
 
     {
@@ -165,7 +170,8 @@
       "img3":"./assets/images/Products/blackout/black2.webp",
       "img4":"./assets/images/Products/blackout/black3.jpg",
       "img5":"assets/images/Home/Screen.png",
-      "img6":"assets/images/Home/Translucent.png"
+      "img6":"assets/images/Home/Translucent.png",
+      "bg":"./assets/images/Products/bg/Blackout.png"
     },
 
     {
@@ -192,7 +198,8 @@
       "img3":"./assets/images/Products/trans/trans2.webp",
       "img4":"./assets/images/Products/trans/trans3.webp",
       "img5":"assets/images/Home/Blackout.png",
-      "img6":"assets/images/Home/Roman.png"
+      "img6":"assets/images/Home/Roman.png",
+      "bg":"./assets/images/Products/bg/Translucent.png"
     },
 
     {
@@ -222,6 +229,7 @@
       "img3":"./assets/images/Products/roman/roman2.webp",
       "img4":"./assets/images/Products/roman/roman3.webp",
       "img5":"assets/images/Home/Translucent.png",
-      "img6":"assets/images/Home/Woodne.png"
+      "img6":"assets/images/Home/Woodne.png",
+      "bg":"./assets/images/Products/bg/Roman_bg.png"
     }
 ]

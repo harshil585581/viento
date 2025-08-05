@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Title -->
-    <title>Viento</title>
+    <title>Viento | Home</title>
     <!-- Favicon Icon -->
     <link rel="icon" type="image/x-icon" href="./assets/images/logos/Flaticon.svg" />
     <!-- Google Fonts -->
@@ -29,20 +29,14 @@
     <!-- Main Style -->
     <link rel="stylesheet" href="assets/css/style.css">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
 
     <style>
-        @font-face {
-            font-family: 'Giliyans-Regular' !important;
-            src: url('/assets/fonts/Giliyans-Regular.otf') format('opentype');
-            font-weight: normal;
-            font-style: normal;
-        }
-
-        body {
-            font-family: 'Giliyans-Regular', sans-serif !important;
-        }
-
-
         /* menu */
         .dropdown ul {
             padding: 0;
@@ -80,18 +74,22 @@
 
 
 
-
+        /* image before after */
         *,
-        *::before,
-        *::after {
+        *::after,
+        *::before {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
-        main {
-            display: grid;
-            place-items: center;
+        iframe {
+            aspect-ratio: 16/9;
+        }
+
+        .yt-frame-box {
+            margin: 2rem;
+            max-height: 300px;
         }
 
         img {
@@ -99,45 +97,42 @@
             max-width: 100%;
         }
 
-        iframe {
-            aspect-ratio: 16 / 9;
+        main {
+            display: grid;
+            place-items: center;
+            min-height: 100vh;
         }
 
-        .yt-wrapper {
-            margin: 0.5rem;
-            max-height: 300px;
-        }
-
-        .slider-wrapper {
+        .photo-compare-wrapper {
             display: grid;
             place-content: center;
             position: relative;
             overflow: hidden;
             border-radius: 1rem;
-            --slider-pos: 50%;
+            --position: 50%;
         }
 
-        .slider-images {
+        .compare-image-box {
             max-width: 800px;
             max-height: 90vh;
-            /* aspect-ratio: 1 / 1; */
+            aspect-ratio: 1/1;
         }
 
-        .img-item {
+        .preview-img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            object-position: center;
+            object-position: left;
         }
 
-        .slider-before {
+        .compare-before {
             position: absolute;
             inset: 0;
-            width: var(--slider-pos);
+            width: var(--position);
             /* filter: grayscale(100%); */
         }
 
-        .slider-control {
+        .compare-slider {
             position: absolute;
             inset: 0;
             cursor: pointer;
@@ -146,23 +141,23 @@
             height: 100%;
         }
 
-        .slider-control:focus-visible~.slider-handle {
+        .compare-slider:focus-visible~.compare-slider-icon {
             outline: 5px solid black;
             outline-offset: 3px;
         }
 
-        .slider-divider {
+        .compare-divider-line {
             position: absolute;
             inset: 0;
             width: 0.2rem;
             height: 100%;
             background-color: #fff;
-            left: var(--slider-pos);
+            left: var(--position);
             transform: translateX(-50%);
             pointer-events: none;
         }
 
-        .slider-handle {
+        .compare-slider-icon {
             position: absolute;
             background-color: #fff;
             color: black;
@@ -171,10 +166,10 @@
             display: grid;
             place-items: center;
             top: 50%;
-            left: var(--slider-pos);
+            left: var(--position);
             transform: translate(-50%, -50%);
             pointer-events: none;
-            box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+            box-shadow: 1px 1px 1px hsl(0, 50%, 2%, 0.5);
         }
 
 
@@ -187,7 +182,7 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            font-size: 4em;
+            font-size: 5.2em;
             color: transparent;
             text-transform: uppercase;
         }
@@ -529,6 +524,49 @@
                 padding-top: 0;
             }
         }
+
+        @media (max-width: 767px) {
+            .testimonial-heading {
+                text-align: center !important;
+                margin-left: 0 !important;
+            }
+
+            .review-container {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                padding: 0 15px;
+            }
+
+            .review-grid {
+                max-width: 100%;
+                margin: 0 auto;
+                text-align: center;
+            }
+
+            .review-image-box {
+                margin: 0 auto 20px;
+                text-align: center;
+                display: flex;
+                justify-content: center;
+            }
+
+            .review-content {
+                text-align: center;
+            }
+
+            .review-arrows {
+                justify-content: center;
+                margin-top: 20px;
+            }
+
+            .review-name,
+            .review-role,
+            .review-text {
+                text-align: center;
+            }
+        }
     </style>
 
 </head>
@@ -655,7 +693,7 @@
                         <div class="row carousel-item active">
                             <div class="d-flex">
                                 <div class="col-lg-2">
-                                    <h2 class="rotate-hero">DESIGN</h1>
+                                    <h2 class="rotate-hero">Luxury</h1>
                                 </div>
                                 <div class="col-lg-10 d-flex hero-text-img">
                                     <div class="hero-content">
@@ -676,7 +714,9 @@
                                         <a href="">
                                             <video class="hero-img wow zoomIn" width="915" height="725" autoplay loop
                                                 muted>
-                                                <source src="./assets/images/Home_video.mp4" type="video/mp4">
+                                                <source
+                                                    src="./assets/images/sun-shining-through-window-blinds-close-2023-11-27-04-51-43-utc.mp4"
+                                                    type="video/mp4">
                                             </video>
                                         </a>
                                     </div>
@@ -686,7 +726,7 @@
                         <div class="row carousel-item">
                             <div class="d-flex">
                                 <div class="col-lg-2">
-                                    <h2 class="rotate-hero">CRAFT</h2>
+                                    <h2 class="rotate-hero">DESIGN</h2>
                                 </div>
                                 <div class="col-lg-10 d-flex hero-text-img">
                                     <div class="hero-content">
@@ -717,7 +757,7 @@
                         <div class="row carousel-item">
                             <div class="d-flex">
                                 <div class="col-lg-2">
-                                    <h4 class="rotate-hero">Luxury</h4>
+                                    <h4 class="rotate-hero">CRAFT</h4>
                                 </div>
                                 <div class="col-lg-10 d-flex hero-text-img">
                                     <div class="hero-content">
@@ -738,7 +778,9 @@
                                         <a href="">
                                             <video class="hero-img wow zoomIn" width="915" height="725" autoplay loop
                                                 muted>
-                                                <source src="./assets/images/Home_video.mp4" type="video/mp4">
+                                                <source
+                                                    src="./assets/images/building-with-multiple-blinds-on-windows-in-ljublj-1080p-2025-07-24-06-38-49-utc.mov"
+                                                    type="video/mp4">
                                             </video>
                                         </a>
                                     </div>
@@ -862,7 +904,7 @@
             <div class="container-fluid">
                 <div class="container d-flex section-heading mb-96">
                     <div class="section-title">
-                        <h2 class="wow fadeInUp delay-0-2s">SERVICES</h2>
+                        <h2 class="wow fadeInUp delay-0-2s">OUR PRODUCTS</h2>
                     </div>
                     <div class="carousel-buttons">
                         <button class="prev" type="button" data-bs-target="#servicerecipeCarousel" data-bs-slide="prev">
@@ -1490,7 +1532,7 @@
             <div class="container">
                 <div class="row section-heading mb-96">
                     <div class="section-title  col-sm-6 col-lg-6">
-                        <h2 class="wow fadeInUp delay-0-2s">WORK PROCESS</h2>
+                        <h2 class="wow fadeInUp delay-0-2s">FEATURES</h2>
                     </div>
                     <div class="button  col-sm-6 col-lg-6">
                         <a class="theme-btn" href="contact.html">Contact Us</a>
@@ -1541,7 +1583,7 @@
                                         while you shape the mood, your privacy stays protected with fabrics designed to
                                         shield without compromising style.</p>
                                 </div>
-                                <img src="assets/images/work-process/1.jpg" alt="Timeline">
+                                <img src="assets/images/Home/1.Superior Light control.jpg" alt="Timeline">
                             </div>
                             <div>
                                 <div class="content">
@@ -1551,7 +1593,7 @@
                                         stay as beautiful and functional as the day they're installed, even with daily
                                         use and changing seasons.</p>
                                 </div>
-                                <img src="assets/images/work-process/2.jpg" alt="Timeline">
+                                <img src="assets/images/Home/2 Premium Material.webp" alt="Timeline">
                             </div>
                             <div>
                                 <div class="content">
@@ -1561,7 +1603,7 @@
                                         our fabrics improve insulation and lower energy costs, making your space more
                                         comfortable and efficient year-round.</p>
                                 </div>
-                                <img src="assets/images/work-process/3.jpg" alt="Timeline">
+                                <img src="assets/images/Home/3. Engery Effecency and insulation.webp" alt="Timeline">
                             </div>
                             <div>
                                 <div class="content">
@@ -1571,7 +1613,7 @@
                                         preserve the color and quality of your furniture, flooring, and décor—so your
                                         space stays vibrant, longer.</p>
                                 </div>
-                                <img src="assets/images/work-process/4.jpg" alt="Timeline">
+                                <img src="assets/images/Home/4.UV Protection.avif" alt="Timeline">
                             </div>
                             <div>
                                 <div class="content">
@@ -1581,7 +1623,7 @@
                                         or tap. Set schedules, automate scenes, and adjust your blinds remotely—for
                                         comfort, convenience, and modern living at its finest.</p>
                                 </div>
-                                <img src="assets/images/work-process/5.jpg" alt="Timeline">
+                                <img src="assets/images/Home/5.Smart automation.jpg" alt="Timeline">
                             </div>
 
                         </div>
@@ -1591,22 +1633,20 @@
         </section>
 
 
+
+
         <!-- slider-image -->
         <main>
-            <div class="yt-wrapper">
-                <iframe src="https://www.youtube.com/embed/dzqDU9efnnk" title="YouTube video player" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen></iframe>
-            </div>
-            <div class="slider-wrapper">
-                <div class="slider-images">
-                    <img class="slider-after img-item" src="./assets/images/Home/Before.png" alt="black and white" />
-                    <img class="slider-before img-item" src="./assets/images/Home/After.png" alt="color photo" />
+            <div class="photo-compare-wrapper" style="margin-top: 3%; margin-bottom: 3%;">
+                <div class="compare-image-box">
+                    <img class="compare-before preview-img" src="./assets/images/Home/After.png" alt="color photo" />
+                    <img class="compare-after preview-img" src="./assets/images/Home/Before.png"
+                        alt="black and white" />
                 </div>
-
-                <input type="range" min="0" max="100" value="50" class="slider-control" aria-label="Slider range" />
-                <div class="slider-divider" aria-hidden="true"></div>
-                <div class="slider-handle" aria-hidden="true">
+                <input type="range" min="0" max="100" value="50" aria-label="Before photo visibility"
+                    class="compare-slider" />
+                <div class="compare-divider-line" aria-hidden="true"></div>
+                <div class="compare-slider-icon" aria-hidden="true">
                     <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
                         viewBox="0 0 256 256">
                         <rect width="256" height="256" fill="none"></rect>
@@ -1615,19 +1655,13 @@
                         <line x1="96" y1="128" x2="16" y2="128" stroke="currentColor" stroke-linecap="round"
                             stroke-linejoin="round" stroke-width="16"></line>
                         <polyline points="48 160 16 128 48 96" stroke="currentColor" stroke-linecap="round"
-                            stroke-linejoin="round" stroke-width="16" fill="none"></polyline>
+                            stroke-linejoin="round" stroke-width="16"></polyline>
                         <line x1="160" y1="128" x2="240" y2="128" stroke="currentColor" stroke-linecap="round"
                             stroke-linejoin="round" stroke-width="16"></line>
                         <polyline points="208 96 240 128 208 160" stroke="currentColor" stroke-linecap="round"
-                            stroke-linejoin="round" stroke-width="16" fill="none"></polyline>
+                            stroke-linejoin="round" stroke-width="16"></polyline>
                     </svg>
                 </div>
-            </div>
-
-            <div class="yt-wrapper">
-                <iframe src="https://www.youtube.com/embed/dzqDU9efnnk" title="YouTube video player" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen></iframe>
             </div>
         </main>
 
@@ -1637,8 +1671,7 @@
         <!-- Reviews Area start -->
         <section class="reviews-area black-100-bg" style="padding: 55px 0;">
             <div class="container">
-                <h2 class="testimonial-heading text-left mb-32"
-                    style="margin-left: 2%;">
+                <h2 class="testimonial-heading text-left mb-32" style="margin-left: 2%;">
                     Hear From Our Valued Customers
                 </h2>
                 <div class="testimonials-slider wow fadeInUp delay-0-4s">
@@ -1864,12 +1897,12 @@
                     <div class="col-lg-4 item text-center" style="height: 731px;">
                         <div class="blog-item wow fadeInUp delay-0-2s black-30-bg ">
                             <div class="content ">
-                                <h6><a href="blog-details-light.html">Transform Your Space : How Window Blinds Influence
+                                <h6><a href="blog-details-2.html">Transform Your Space : How Window Blinds Influence
                                         Interior Design</a></h6>
                                 <hr>
                                 <span><i class="fal fa-calendar-alt"></i> 15 March</span>
                                 <div class="image">
-                                    <img src="assets/images/Blogs/Blog_3_resized.webp" alt="Blog">
+                                    <img src="assets/images/Home/image_d.png" alt="Blog">
                                 </div>
                                 <a href="blog-details-1.html" class="theme-btn">Read more</a>
                             </div>
@@ -1901,12 +1934,12 @@
                     <div class="col-lg-4 item text-center" style="height: 731px;">
                         <div class="blog-item wow fadeInUp delay-0-2s black-30-bg" style="height: 731px;">
                             <div class="content ">
-                                <h6><a href="blog-details-light.html">How to Choose the Perfect Window Blinds for Every
+                                <h6><a href="blog-details-2.html">How to Choose the Perfect Window Blinds for Every
                                         Room in Your Home</a></h6>
                                 <hr>
                                 <span><i class="fal fa-calendar-alt"></i> 15 July</span>
                                 <div class="image">
-                                    <img src="assets/images/Blogs/Blog_2.webp" alt="Blog">
+                                    <img src="assets/images/Home/image_d1.jpg" alt="Blog">
                                 </div>
                                 <a href="blog-details-2.html" class="theme-btn">Read more</a>
                             </div>
@@ -1915,14 +1948,14 @@
                     <div class="col-lg-4 item text-center" style="height: 731px;">
                         <div class="blog-item wow fadeInUp delay-0-2s black-30-bg " style="height: 731px;">
                             <div class="content ">
-                                <h6><a href="blogs.html">Top Window Blind Trends for Modern Interiors in <br>2025</a>
+                                <h6><a href="blog-details-3.html">Top Window Blind Trends for Modern Interiors in <br>2025</a>
                                 </h6>
                                 <hr>
-                                <span><i class="fal fa-calendar-alt"></i> 15 June</span>
+                                <span><i class="fal fa-calendar-alt"></i> 1 Aug</span>
                                 <div class="image">
                                     <img src="assets/images/Blogs/Blog_1_resized.webp" alt="Blog">
                                 </div>
-                                <a href="blogs.html" class="theme-btn">Read more</a>
+                                <a href="blog-details-3.html" class="theme-btn">Read more</a>
                             </div>
                         </div>
                     </div>
@@ -1972,13 +2005,15 @@
     <script src="assets/js/footer_normal.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 
+    <script src="https://static.elfsight.com/platform/platform.js" async></script>
 
+
+    <!-- image before after -->
     <script>
-        const sliderWrapper = document.querySelector('.slider-wrapper');
-        document.querySelector('.slider-control').addEventListener('input', (e) => {
-            sliderWrapper.style.setProperty('--slider-pos', `${e.target.value}%`);
+        const photoWrapper = document.querySelector('.photo-compare-wrapper');
+        document.querySelector('.compare-slider').addEventListener('input', (e) => {
+            photoWrapper.style.setProperty('--position', `${e.target.value}%`);
         });
-
     </script>
 
 

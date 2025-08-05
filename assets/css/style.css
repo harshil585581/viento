@@ -36,12 +36,7 @@
 /*******************************************************/
 /******************* ## Default Style ******************/
 /*******************************************************/
-@font-face {
-  font-family: 'Giliyans-Regular';
-  src: url('/assets/fonts/Giliyans-Regular.otf') format('opentype');
-  font-weight: normal;
-  font-style: normal;
-}
+
 
 
 * {
@@ -63,7 +58,7 @@ body {
   font-weight: 400;
   line-height: 28px;
   font-size: 16px;
-    font-family: 'Giliyans-Regular', sans-serif;
+   font-family: 'Plus Jakarta Sans';
   --primary-color: #E2DA47;
   --heading-color: #FFFFFF;
   --secondary-color: #141414;
@@ -79,7 +74,7 @@ body {
   --black-30: #B9B9B9;
   --black-20: #d0d0d0;
   --black-10: #E8E8E8;
-  --border-color: #D9DFE7;
+  --border-color: #D9DFE7; 
 }
 
 body:has(.light-mode) {
@@ -903,7 +898,7 @@ h5,
 h6,
 .h6 {  
   color: var(--heading-color);
-    font-family: 'Giliyans-Regular',sans-serif;
+    /* font-family: 'Giliyans-Regular',sans-serif; */
 }
 
 .light-mode .heading,
@@ -6941,19 +6936,19 @@ blockquote cite.name {
   color: transparent;
    background: linear-gradient(to right, var(--primary-color) 0%, var(--primary-color) 50%, var(--black-100) 50%);
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  /* -webkit-text-fill-color: transparent; */
   z-index: 2;
 }
 
 .contact-title:after{
   content: '';
-  background: var(--black-30);
+  /* background: var(--black-30); */
   position: absolute;
   right: 0;
   top: 0;
   width: 50%;
   height: 100%;
-  z-index: -1;
+  /* z-index: -1; */
 }
 
 .contact-area{
@@ -7018,7 +7013,7 @@ blockquote cite.name {
   height: 100%;
   top: 0;
   right: 0;
-  background: var(--black-30);
+  /* background: var(--black-30); */
   display: block;
   position: absolute;
   z-index: -1;

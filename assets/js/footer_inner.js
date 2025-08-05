@@ -82,11 +82,11 @@ async function loadDocumentPage() {
                                         <h4 class="h4-rotate key-link">LINKS</h4>
                                     </div>
                                     <ul class="right links">
-                                        <li><a class="" href="index-light.html">Home</a></li>
-                                        <li><a class="" href="about-light.html">About</a></li>
-                                        <li><a class="" href="projects-01-light.html">Projects</a></li>
-                                        <li><a class="" href="blog-light.html">Blog</a></li>
-                                        <li><a class="" href="contact-light.html">Contact</a></li>
+                                        <li><a class="" href="index.html">Home</a></li>
+                                        <li><a class="" href="about.html">About</a></li>
+                                        <li><a class="" href="product-details.html">Products</a></li>
+                                        <li><a class="" href="blogs.html">Blog</a></li>
+                                        <li><a class="" href="contact.html">Contact</a></li>
                                     </ul>
                                 </div>
                             </div>

@@ -142,7 +142,7 @@
                 dots: false,
                 infinite: true,
                 autoplay: true,  // Changed to true
-                autoplaySpeed: 5000,
+                autoplaySpeed: 1000,
                 arrows: false,
                 vertical: false,
                 speed: 1000,
@@ -161,7 +161,7 @@
                 dots: false,
                 infinite: true,
                 autoplay: true,  // Changed to true
-                autoplaySpeed: 5000,
+                autoplaySpeed: 1000,
                 arrows: false,
                 vertical: true,
                 speed: 1000,

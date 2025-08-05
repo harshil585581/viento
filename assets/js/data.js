@@ -40,7 +40,7 @@ async function loadDocumentPage() {
                 // Your existing template code here...
                 document.getElementById("doc-container").innerHTML = `
                     <section class="banner-area pt-324 pb-250"
-            style="background-image: url(assets/images/project-details/banner-2.jpg);">
+            style="background-image: url(${doc.bg});">
             <div class="container text-center">
                 <div class="row align-items-center justify-content-between">
                     <div class="banner-content wow fadeInUp delay-0-2s">
@@ -182,15 +182,9 @@ async function loadDocumentPage() {
         <section class="related-projects py-128 black-10-bg">
             <div class="container">
                 <div class="content align-items-center">
-                    <div class="row mb-64 wow fadeInLeft delay-0-1s">
-                        <a class="prev-pro" href="project-details-light.html">
-                            <i class="fa fa-long-arrow-left"></i> PREV
-                        </a>
-                        <a href="projects-01-light.html"><i class="fa fa-table"></i></a>
-                        <a class="next-pro" href="project-details-light.html">
-                            NEXT <i class="fa fa-long-arrow-right"></i>
-                        </a>
-                    </div>
+                    
+
+
                     <div class="row wow fadeInLeft delay-0-1s">
                         <div class="col-lg-6 related-left">
                             <div class="row black-100-bg">
@@ -213,7 +207,7 @@ async function loadDocumentPage() {
                                     </a>
                                 </div>
                                 <div class="col-xs-12 col-sm-6 col-lg-6">
-                                    <a href="project-details-light.html"><img
+                                    <a href="${doc.id2}"><img
                                             src="${doc.img6}" alt="Apartment"></a>
                                 </div>
                             </div>
